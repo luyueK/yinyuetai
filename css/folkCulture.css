@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+/*  民俗文化页面样式 */
+
+.warp {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.main_bg {
+    background: #fff url(../images/folkCulture/bgnn.jpg) repeat-y center top;
+}
+
+.main_bg h3 {
+    font-size: 24px;
+}
+
+.introduce1 {
+    height: 912px;
+    background: #fff url(../images/folkCulture/top.jpg) repeat-y center top;
+}
+
+.introduce1 .warp {
+    padding-top: 427px;
+}
+
+.introduce1 .warp h3 {
+    color: #fbe9a6;
+    line-height: 36px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.introduce1 .warp h3 span {
+    margin: 0 15px;
+}
+
+.introduce1 .warp p {
+    text-indent: 2em;
+    color: #fef7dd;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: Tahoma, '\5FAE\8F6F\96C5\9ED1', 'Microsoft Yahei', "hiragino sans gb", Helvetica, Arial, "\5b8b\4f53", 'sans-serif'
+}
+
+.introduce2 .title_bg {
+    width: 644px;
+    height: 272px;
+    background: url(../images/folkCulture/top2.png) no-repeat;
+    margin: 0 auto;
+}
+
+.introduce2 .part1, .introduce2 .part2 {
+    width: 410px;
+}
+
+.introduce2 h4 {
+    line-height: 64px;
+    color: #9e7f00;
+    font-size: 24px;
+}
+
+.introduce2 p {
+    color: #333;
+    font-size: 16px;
+    line-height: 28px;
+    text-indent: 2em;
+}
+
+.main_cont_box .top_bg {
+    background: url(../images/folkCulture/bg_t.png) center top no-repeat;
+    height: 208px;
+}
+
+.main_cont_box .bot_bg {
+    background: url(../images/folkCulture/bg_b.png) center top no-repeat;
+    height: 208px;
+}
+
+.main_cont_box .m_cont {
+    background: url(../images/folkCulture/bg_c.png) center top repeat-y;
+}
+
+.next_time .m_cont {
+    padding-bottom: 30px;
+}
+
+.main_cont_box1 .m_cont {
+    background: none;
+}
+
+.main_cont_box .m_cont .cont_t {
+    padding: 15px 15px 8px;
+    background-color: #fef0d6;
+    margin-bottom: 30px;
+}
+
+.next_time .m_cont .cont_t {
+    height: 167px;
+    padding: 0;
+    margin-bottom: 0;
+    background: url(../images/folkCulture/child_tit.png) no-repeat;
+}
+
+.main_cont_box .m_cont .cont_t .t_l {
+    width: 336px;
+}
+
+.main_cont_box .m_cont .cont_t .t_l h3 {
+    margin-bottom: 14px;
+}
+
+.main_cont_box .m_cont .cont_t .t_l h3 span {
+    font-size: 40px;
+    font-weight: normal;
+    color: #333;
+}
+
+.main_cont_box .m_cont .cont_t .t_l h3 a {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 32px;
+    color: #333;
+}
+
+.main_cont_box .m_cont .cont_t .t_l h3 a:hover {
+    color: #690;
+}
+
+.main_cont_box .m_cont .cont_t .t_l p {
+    font-size: 14px;
+    line-height: 28px;
+    text-indent: 2em;
+}
+
+.main_cont_box .m_cont .cont_t .t_r {
+    width: 514px;
+    overflow: hidden;
+}
+
+.main_cont_box .m_cont .cont_t .t_r .v_box, .main_cont_box .m_cont .cont_b .cont_list .v_box {
+    position: relative;
+}
+
+.main_cont_box .m_cont .cont_t .t_r .v_box img {
+    width: 514px;
+    height: 343px;
+    vertical-align: top;
+}
+
+.main_cont_box .m_cont .cont_t .t_r .v_box .opa_bar, .main_cont_box .m_cont .cont_b .v_box .opa_bar {
+    display: none;
+}
+
+.main_cont_box .m_cont .cont_t .t_r .v_box .opa_bar i {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.main_cont_box .m_cont .cont_t .t_r .v_box .opa_bar b, .main_cont_box .m_cont .cont_b .cont_list .v_box .opa_bar b {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -24px 0 0 -24px;
+    background: url(../images/folkCulture/v_hover.png) no-repeat;
+}
+
+.main_cont_box .m_cont .cont_t .t_r h5 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background: url(../images/folkCulture/tit_bg.png) repeat-x;
+    line-height: 50px;
+    font-size: 14px;
+    padding-left: 14px;
+    width: 100%;
+    color: #ecdbbb;
+}
+
+.next_time .m_cont .cont_b {
+    margin-top: -30px;
+}
+
+.main_cont_box .m_cont .cont_b .cont_list {
+    margin-right: -30px;
+}
+
+.main_cont_box .m_cont .cont_b .cont_list li {
+    margin-right: 30px;
+    width: 202px;
+}
+
+.main_cont_box .m_cont .cont_b .cont_list .v_box {
+    border: 4px solid #fef0d6;
+    width: 194px;
+    height: 127px;
+}
+
+.main_cont_box .m_cont .cont_b .cont_list .v_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.main_cont_box .m_cont .cont_b .cont_list .v_box .opa_bar i {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main_cont_box .m_cont .cont_b .cont_list h5 {
+    height: 42px;
+    line-height: 42px;
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.top_main .top_left .top_nav>:nth-child(1) a { 
+    color: #ccc; 
+}
+.top_main .top_left .top_nav>:nth-child(7) a { 
+    color: #cf9; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音悦台第3页</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/top_nav.css">
+    <link rel="stylesheet" type="text/css" href="../css/vchart.css">
+    <script src="../js/jquery-1.7.2.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        (function(){
+            var timer = null;
+            function autoPlay(){
+
+                var i = 0;
+                clearInterval(timer);
+                timer = setInterval(function (){
+                    i++;
+                    if ( i == 5 ) i = 0;
+                    $('.sidebar-ul li a').removeClass('active');
+                    $('.sidebar-ul li a').eq(i).addClass('active');
+                    $('.banner-ul').stop().animate({
+                        'marginTop':-i*403+'px'
+                    },1000,function (){
+                        console.log(2)
+                    });
+                },2000);
+            }
+
+            autoPlay();
+
+            $('.sidebar-ul li').mouseover(function (){
+                console.log(3);
+                clearInterval(timer);
+
+                $('.sidebar-ul li a').removeClass('active');
+                $(this).find('a').addClass('active');
+                $('.banner-ul').stop().animate({
+                    'marginTop':-$(this).index()*403+'px'
+                },1000);
+            });
+            $('.sidebar-ul li').mouseout(function (){
+                autoPlay();
+            });
+        })(); 
+    </script>
+<body>
+    <div class="back_top"><a href="javascript:;"><img src="../images/returntop.png" alt=""></a></div>
+    <!--nav开始-->
+    <nav></nav>
+    <nav class="top_main clearfix">
+        <div class="top_left fl">
+            <div class="logo fl">
+                <a href="../index.html"><h1>音悦Tai - 让娱乐更美好</h1></a>
+            </div>
+            <ul class="top_nav fl">
+                <li class=" fl"><a href="../index.html">首页</a></li>
+                <li class="mv_box fl">
+                    <a class="clearfix" href="mv.html"><span class="fl">MV</span><i class="fl"></i></a>
+                    <ul class="mv_list">
+                        <li><a href="#">韩流频道</a></li>
+                        <li><a href="#">华语频道</a></li>
+                        <li><a href="#">欧美频道</a></li>
+                        <li><a href="#">日语频道</a></li>
+                        <li><a href="#">粉丝聚焦</a></li>
+                    </ul>
+                </li>
+                <!----------------------------------------------------------------->
+                <li class="fl"><a href="vchart.html">V榜</a></li>
+                <li class="fl"><a href="news.html">娱乐</a></li>
+                <li class="fl"><a href="shop.html">商城</a></li>
+                <li class="fl"><a href="funding.html">众筹</a></li>
+                <li class="fl"><a href="folkCulture.html">民俗文化</a></li>
+                <!----------------------------------------------------------------->
+            </ul>
+        </div>
+        <div class="top_right fr">
+            <ul class="func clearfix">
+                <li class="search_bar fl">
+                    <div></div>
+                    <div></div>
+                    <form action="http://so.yinyuetai.com">
+                        <div class="search_box"><input type="text" placeholder="金刚狼十七年催泪混剪"><i></i></div>
+                    </form>
+                    <div class="search_bar_down">
+                        <ul>
+                            <li><a href="#">夏日女团清凉回归</a> </li>
+                            <li><a href="#">exo歌曲demo大合集</a> </li>
+                            <li><a href="#">林肯公园主唱自杀身亡</a> </li>
+                            <li><a href="#">天了噜！薛之谦田馥甄</a> </li>
+                            <li><a href="#">暑期档电视剧OST友情大放送</a> </li>
+                            <li><a href="#">2017下半年要回归的KPOP团！</a> </li>
+                            <li><a href="#">楚乔宇文玥昨天接吻</a> </li>
+                            <li><a href="#">金泰妍最佳舞台演唱合集！超棒</a> </li>
+                            <li><a href="#">吴青峰未发表作品《只有可以》</a> </li>
+                            <li><a href="#">男生跳女版舞步究！？</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="top_vip fl"><a href="#"></a></li>
+                <li class="top_up fl"><a href="#"></a></li>
+                <li class="top_share fl">
+                    <a class="clearfix" href="#"><span class="fl"></span><i class="fl"></i></a>
+                    <ul class="share_list">
+                        <li><a href="#">移动客户端</a></li>
+                        <li><a href="#">PC客户端</a></li>
+                        <li><a href="#">Star明星直播</a></li>
+                    </ul>
+                </li>
+                <li class="login_bar fl">
+                    <a class="login" href="#">登录</a>
+                    <a class="reg" href="#">注册</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--nav结束-->
+    <!--内容区开始-->
+    <div class="container">
+        <!--二级导航开始-->
+        <nav class="sub-nav clearfix">
+            <span class="vlogo fl"></span>
+            <ul class="clearfix fr sub-nav-ul">
+                <li class="fl sub-nav-li"><a href="#" class="sub-nav-a">聚焦</a> </li>
+                <li class="fl sub-nav-li"><a href="#" class="sub-nav-a">MV作品榜</a> </li>
+                <li class="fl sub-nav-li"><a href="#" class="sub-nav-a">专辑销量榜</a> </li>
+                <li class="fl sub-nav-li"><a href="#" class="sub-nav-a">China V Chart</a> </li>
+                <li class="fl sub-nav-li"><a href="#" class="sub-nav-a">第5届音悦V榜盛典</a> </li>
+            </ul>
+        </nav>
+        <!--二级导航结束-->
+        <!--banner开始-->
+        <div class="banner">
+            <ul class="banner-ul">
+                <li>
+                <a class="banner-a"><img src="../images/vchart/banner.jpg"> </a>
+                </li>
+                <li class="banner-li-1">
+                    <a class="banner-a"><img src="../images/vchart/banner-2.jpg"> </a>
+                </li>
+                <li>
+                <a class="banner-a"><img src="../images/vchart/banner.jpg"> </a>
+                </li>
+                <li class="banner-li-1">
+                    <a class="banner-a"><img src="../images/vchart/banner-2.jpg"> </a>
+                </li>
+                <li>
+                <a class="banner-a"><img src="../images/vchart/banner.jpg"> </a>
+                </li>
+            </ul>
+            <div class="sidebar">
+                <ul class="sidebar-ul">
+                    <li class="sidebar-li"><a href="#" class="active sidebar-a">徐良.十国十色 </a> </li>
+                    <li class="sidebar-li"><a href="#" class="sidebar-a">暑期档电视剧OST友情大放送</a> </li>
+                    <li class="sidebar-li"><a href="#" class="sidebar-a">TFBOYS三首新歌空降内地榜单</a> </li>
+                    <li class="sidebar-li"><a href="#" class="sidebar-a">2017夏季日剧档开更啦</a> </li>
+                    <li class="sidebar-li"><a href="#" class="sidebar-a">王嘉尔《Generation2》MV正式上线</a> </li>
+                </ul>
+            </div>
+        </div>
+        <!--banner结束-->
+        <!--V榜版块开始-->
+        <div class="v-list clearfix">
+            <div class="v-left fl">
+                <ul class="v-left-ul">
+                    <li class="v-left-li"><a href="#" class="v-left-a">周一 V榜TOP10</a> </li>
+                    <li class="v-left-li"><a href="#" class="v-left-a">周二 V榜看音乐</a> </li>
+                    <li class="v-left-li"><a href="#" class="v-left-a">周三 V榜密谈室</a> </li>
+                    <li class="v-left-li"><a href="#" class="v-left-a">周四 V榜有话说</a> </li>
+                    <li class="v-left-li"><a href="#" class="v-left-a">周五 V榜特别企划 </a> </li>
+                </ul>
+            </div>
+            <div class="v-right fl">
+                <div class="v-right-top">
+                    <h3 class="v-right-h3">V榜特别企划</h3>
+                    <p class="v-right-p">这里有最前沿的音乐动脉和MV时尚潮流，奇特巧妙的独家盘点，打造最新鲜，最好玩，最有范儿的特别节目！</p>
+                </div>
+                <div class="v-right-video clearfix">
+                    <div class="v-right-l fl">
+                        <a href="#" class="v-right-l-a"><img src="../images/vchart/v-right-1.jpg"></a>
+                        <div class="v-right-bg"></div>
+                    </div>
+                    <div class="v-right-r fl">
+                        <h3 class="v-right-h3-2"><a href="#" class="v-right-a-2" >夏日女团清凉回归 V榜特别企划EP194</a></h3>
+                        <p class="right-r-p">夏天夏天已经来啦,快要热死啦。没错,就是这么热的夏天,泡菜的小姐姐们一个个的都带着清凉到不行的歌曲回归,活泼少女
+                            、帅气girl和性感大姐姐神马的,简直就是宅男福利大放送!这种火上浇油以毒攻毒的事情,嘿嘿,V榜君还是很喜欢哒~</p>
+                    </div>
+                </div>
+                <a href="#" class="v-right-more">更多往期节目>></a>
+            </div>
+        </div>
+        <!--隐藏1开始-->
+        <div class="v-list-2 clearfix">
+            <div class="v-right fl">
+                <div class="v-right-top">
+                    <h3 class="v-right-h3">V榜特别企划</h3>
+                    <p class="v-right-p">这里有最前沿的音乐动脉和MV时尚潮流，奇特巧妙的独家盘点，打造最新鲜，最好玩，最有范儿的特别节目！</p>
+                </div>
+                <div class="v-right-video clearfix">
+                    <div class="v-right-l fl">
+                        <a href="#" class="v-right-l-a"><img src="../images/vchart/v-right-1.jpg"></a>
+                        <div class="v-right-bg"></div>
+                    </div>
+                    <div class="v-right-r fl">
+                        <h3 class="v-right-h3-2"><a href="#" class="v-right-a-2" >夏日女团清凉回归 V榜特别企划EP194</a></h3>
+                        <p class="right-r-p">夏天夏天已经来啦,快要热死啦。没错,就是这么热的夏天,泡菜的小姐姐们一个个的都带着清凉到不行的歌曲回归,活泼少女
+                            、帅气girl和性感大姐姐神马的,简直就是宅男福利大放送!这种火上浇油以毒攻毒的事情,嘿嘿,V榜君还是很喜欢哒~</p>
+                    </div>
+                </div>
+                <a href="#" class="v-right-more">更多往期节目>></a>
+            </div>
+        </div>
+        <!--隐藏1结束-->
+        <!--隐藏2开始-->
+        <div class="v-list-3 clearfix">
+            <div class="v-right fl">
+                <div class="v-right-top">
+                    <h3 class="v-right-h3">V榜特别企划</h3>
+                    <p class="v-right-p">这里有最前沿的音乐动脉和MV时尚潮流，奇特巧妙的独家盘点，打造最新鲜，最好玩，最有范儿的特别节目！</p>
+                </div>
+                <div class="v-right-video clearfix">
+                    <div class="v-right-l fl">
+                        <a href="#" class="v-right-l-a"><img src="../images/vchart/v-right-1.jpg"></a>
+                        <div class="v-right-bg"></div>
+                    </div>
+                    <div class="v-right-r fl">
+                        <h3 class="v-right-h3-2"><a href="#" class="v-right-a-2" >夏日女团清凉回归 V榜特别企划EP194</a></h3>
+                        <p class="right-r-p">夏天夏天已经来啦,快要热死啦。没错,就是这么热的夏天,泡菜的小姐姐们一个个的都带着清凉到不行的歌曲回归,活泼少女
+                            、帅气girl和性感大姐姐神马的,简直就是宅男福利大放送!这种火上浇油以毒攻毒的事情,嘿嘿,V榜君还是很喜欢哒~</p>
+                    </div>
+                </div>
+                <a href="#" class="v-right-more">更多往期节目>></a>
+            </div>
+        </div>
+        <!--隐藏2结束-->
+        <!--隐藏3开始-->
+        <div class="v-list-4 clearfix">
+            <div class="v-right fl">
+                <div class="v-right-top">
+                    <h3 class="v-right-h3">V榜特别企划</h3>
+                    <p class="v-right-p">这里有最前沿的音乐动脉和MV时尚潮流，奇特巧妙的独家盘点，打造最新鲜，最好玩，最有范儿的特别节目！</p>
+                </div>
+                <div class="v-right-video clearfix">
+                    <div class="v-right-l fl">
+                        <a href="#" class="v-right-l-a"><img src="../images/vchart/v-right-1.jpg"></a>
+                        <div class="v-right-bg"></div>
+                    </div>
+                    <div class="v-right-r fl">
+                        <h3 class="v-right-h3-2"><a href="#" class="v-right-a-2" >夏日女团清凉回归 V榜特别企划EP194</a></h3>
+                        <p class="right-r-p">夏天夏天已经来啦,快要热死啦。没错,就是这么热的夏天,泡菜的小姐姐们一个个的都带着清凉到不行的歌曲回归,活泼少女
+                            、帅气girl和性感大姐姐神马的,简直就是宅男福利大放送!这种火上浇油以毒攻毒的事情,嘿嘿,V榜君还是很喜欢哒~</p>
+                    </div>
+                </div>
+                <a href="#" class="v-right-more">更多往期节目>></a>
+            </div>
+        </div>
+        <!--隐藏3结束-->
+        <!--隐藏4开始-->
+        <div class="v-list-5 clearfix">
+            <div class="v-right fl">
+                <div class="v-right-top">
+                    <h3 class="v-right-h3">V榜特别企划</h3>
+                    <p class="v-right-p">这里有最前沿的音乐动脉和MV时尚潮流，奇特巧妙的独家盘点，打造最新鲜，最好玩，最有范儿的特别节目！</p>
+                </div>
+                <div class="v-right-video clearfix">
+                    <div class="v-right-l fl">
+                        <a href="#" class="v-right-l-a"><img src="../images/vchart/v-right-1.jpg"></a>
+                        <div class="v-right-bg"></div>
+                    </div>
+                    <div class="v-right-r fl">
+                        <h3 class="v-right-h3-2"><a href="#" class="v-right-a-2" >夏日女团清凉回归 V榜特别企划EP194</a></h3>
+                        <p class="right-r-p">夏天夏天已经来啦,快要热死啦。没错,就是这么热的夏天,泡菜的小姐姐们一个个的都带着清凉到不行的歌曲回归,活泼少女
+                            、帅气girl和性感大姐姐神马的,简直就是宅男福利大放送!这种火上浇油以毒攻毒的事情,嘿嘿,V榜君还是很喜欢哒~</p>
+                    </div>
+                </div>
+                <a href="#" class="v-right-more">更多往期节目>></a>
+            </div>
+        </div>
+        <!--隐藏4结束-->
+        <!--V榜版块结束-->
+        <!--资讯盘点开始-->
+        <div class="news clearfix">
+            <!--资讯盘点左边部分开始-->
+            <div class="news-l fl">
+                <h3 class="title-h3">资讯盘点</h3>
+                <ul class="news-l-ul">
+                    <li class="news-l-li clearfix">
+                        <a href="#" class="news-l-a fl"><img src="../images/vchart/new-1.jpg" class="news-img"> </a>
+                        <div class="news-li-box fl">
+                            <h4 class="li-title-h4"><a href="#">王嘉尔《Generation2》MV，全新上线</a></h4>
+                            <p class="news-li-p">《Generation2》是王嘉尔最新自作曲。曲风融合电子与嘻哈元素，
+                                伴随着急促、进取的节奏，向世界宣誓Generation2“Live For Now”的前沿态度。
+                                通过这首歌，嘉尔想把勇敢尝试的能量传递给所有朋友。“一切可能都在你手里”
+                                “We can make it！”恰如百事可乐一样。人生只有一次，但人生不只一个选择，
+                                你也可以#不只是#你。就现在，做你想做的，大胆尝试每个时刻的无限可能！</p>
+                        </div>
+                    </li>
+                    <li class="news-l-li clearfix">
+                        <a href="#" class="news-l-a fl"><img src="../images/vchart/new-2.jpg" class="news-img"> </a>
+                        <div class="news-li-box fl">
+                            <h4 class="li-title-h4"><a href="#">王嘉尔《Generation2》MV，全新上线</a></h4>
+                            <p class="news-li-p">《Generation2》是王嘉尔最新自作曲。曲风融合电子与嘻哈元素，
+                                伴随着急促、进取的节奏，向世界宣誓Generation2“Live For Now”的前沿态度。
+                                通过这首歌，嘉尔想把勇敢尝试的能量传递给所有朋友。“一切可能都在你手里”
+                                “We can make it！”恰如百事可乐一样。人生只有一次，但人生不只一个选择，
+                                你也可以#不只是#你。就现在，做你想做的，大胆尝试每个时刻的无限可能！</p>
+                        </div>
+                    </li>
+                    <li class="news-l-li clearfix">
+                        <a href="#" class="news-l-a fl"><img src="../images/vchart/new-3.jpg" class="news-img"> </a>
+                        <div class="news-li-box fl">
+                            <h4 class="li-title-h4"><a href="#">王嘉尔《Generation2》MV，全新上线</a></h4>
+                            <p class="news-li-p">《Generation2》是王嘉尔最新自作曲。曲风融合电子与嘻哈元素，
+                                伴随着急促、进取的节奏，向世界宣誓Generation2“Live For Now”的前沿态度。
+                                通过这首歌，嘉尔想把勇敢尝试的能量传递给所有朋友。“一切可能都在你手里”
+                                “We can make it！”恰如百事可乐一样。人生只有一次，但人生不只一个选择，
+                                你也可以#不只是#你。就现在，做你想做的，大胆尝试每个时刻的无限可能！</p>
+                        </div>
+                    </li>
+                    <li class="news-l-li clearfix">
+                        <a href="#" class="news-l-a fl"><img src="../images/vchart/new-4.jpg" class="news-img"> </a>
+                        <div class="news-li-box fl">
+                            <h4 class="li-title-h4"><a href="#">王嘉尔《Generation2》MV，全新上线</a></h4>
+                            <p class="news-li-p">《Generation2》是王嘉尔最新自作曲。曲风融合电子与嘻哈元素，
+                                伴随着急促、进取的节奏，向世界宣誓Generation2“Live For Now”的前沿态度。
+                                通过这首歌，嘉尔想把勇敢尝试的能量传递给所有朋友。“一切可能都在你手里”
+                                “We can make it！”恰如百事可乐一样。人生只有一次，但人生不只一个选择，
+                                你也可以#不只是#你。就现在，做你想做的，大胆尝试每个时刻的无限可能！</p>
+                        </div>
+                    </li>
+                    <li class="news-l-li clearfix">
+                        <a href="#" class="news-l-a fl"><img src="../images/vchart/new-5.jpg" class="news-img"> </a>
+                        <div class="news-li-box fl">
+                            <h4 class="li-title-h4"><a href="#">王嘉尔《Generation2》MV，全新上线</a></h4>
+                            <p class="news-li-p">《Generation2》是王嘉尔最新自作曲。曲风融合电子与嘻哈元素，
+                                伴随着急促、进取的节奏，向世界宣誓Generation2“Live For Now”的前沿态度。
+                                通过这首歌，嘉尔想把勇敢尝试的能量传递给所有朋友。“一切可能都在你手里”
+                                “We can make it！”恰如百事可乐一样。人生只有一次，但人生不只一个选择，
+                                你也可以#不只是#你。就现在，做你想做的，大胆尝试每个时刻的无限可能！</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--资讯盘点左边部分结束-->
+            <!--资讯盘点右边部分开始-->
+            <div class="news-r fl">
+                <h3 class="title-h3 clearfix news-r-h3">
+                    <a href="#" class="fl">专辑榜</a>
+                    <span class="h3-span-1">2017年第29期(2017.07.10~2017.07.16)</span>
+                    <span class="fr h3-span-2">
+                        <a href="#" class="h3-span-a">内地专辑销量榜</a>
+                        <a href="#" class="h3-span-a">进口专辑销量榜</a>
+                    </span>
+                </h3>
+                <div class="news-r-box">
+                    <ul class="news-r-ul clearfix">
+                        <!--第一列开始-->
+                        <li class="news-r-li fl">
+                            <div class="news-li-img clearfix">
+                                <div>
+                                    <a href="#" class="li-img-a">
+                                        <img src="../images/vchart/buyer-1.jpg" class="li-img">
+                                        <i class="top"></i>
+                                    </a>
+                                </div>
+                                <div class="img-list">
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">专辑名称：</dt>
+                                        <dd class="fl dl-dd">《Reloaded 重启》</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">艺人：</dt>
+                                        <dd class="fl dl-dd2 adt">鹿晗</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行公司：</dt>
+                                        <dd class="fl adt">星文文化</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行时间：</dt>
+                                        <dd class="fl adt">2015-12-08</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="buyer">
+                                <h4 class="buyer-title">粉丝购买排行</h4>
+                                <ul class="buyer-ul">
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-1.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-2.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-3.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--第一列结束-->
+                        <!--第二列开始-->
+                        <li class="news-r-li fl">
+                            <div class="news-li-img clearfix">
+                                <div>
+                                    <a href="#" class="li-img-a">
+                                        <img src="../images/vchart/buyer-2.jpg" class="li-img">
+                                        <i class="top-1"></i>
+                                    </a>
+                                </div>
+                                <div class="img-list">
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">专辑名称：</dt>
+                                        <dd class="fl dl-dd">《Reloaded 重启》</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">艺人：</dt>
+                                        <dd class="fl dl-dd2 adt">鹿晗</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行公司：</dt>
+                                        <dd class="fl adt">星文文化</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行时间：</dt>
+                                        <dd class="fl adt">2015-12-08</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="buyer">
+                                <h4 class="buyer-title">粉丝购买排行</h4>
+                                <ul class="buyer-ul">
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-1.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-2.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-3.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--第二列结束-->
+                        <!--第三列开始-->
+                        <li class="news-r-li fl">
+                            <div class="news-li-img clearfix">
+                                <div>
+                                    <a href="#" class="li-img-a">
+                                        <img src="../images/vchart/buyer-3.jpg" class="li-img">
+                                        <i class="top-2"></i>
+                                    </a>
+                                </div>
+                                <div class="img-list">
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">专辑名称：</dt>
+                                        <dd class="fl dl-dd">《Reloaded 重启》</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">艺人：</dt>
+                                        <dd class="fl dl-dd2 adt">鹿晗</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行公司：</dt>
+                                        <dd class="fl adt">星文文化</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行时间：</dt>
+                                        <dd class="fl adt">2015-12-08</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="buyer">
+                                <h4 class="buyer-title">粉丝购买排行</h4>
+                                <ul class="buyer-ul">
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-1.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-2.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-3.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--第三列结束-->
+                    </ul>
+                </div>
+                <!--隐藏版块开始-->
+                <div class="news-r-box-2">
+                    <ul class="news-r-ul clearfix">
+                        <!--第一列开始-->
+                        <li class="news-r-li fl">
+                            <div class="news-li-img clearfix">
+                                <div>
+                                    <a href="#" class="li-img-a">
+                                        <img src="../images/vchart/buyer-4.jpg" class="li-img">
+                                        <i class="top"></i>
+                                    </a>
+                                </div>
+                                <div class="img-list">
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">专辑名称：</dt>
+                                        <dd class="fl dl-dd">《Reloaded 重启》</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">艺人：</dt>
+                                        <dd class="fl dl-dd2 adt">鹿晗</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行公司：</dt>
+                                        <dd class="fl adt">星文文化</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行时间：</dt>
+                                        <dd class="fl adt">2015-12-08</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="buyer">
+                                <h4 class="buyer-title">粉丝购买排行</h4>
+                                <ul class="buyer-ul">
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-1.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-2.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-3.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--第一列结束-->
+                        <!--第二列开始-->
+                        <li class="news-r-li fl">
+                            <div class="news-li-img clearfix">
+                                <div>
+                                    <a href="#" class="li-img-a">
+                                        <img src="../images/vchart/buyer-5.jpg" class="li-img">
+                                        <i class="top-1"></i>
+                                    </a>
+                                </div>
+                                <div class="img-list">
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">专辑名称：</dt>
+                                        <dd class="fl dl-dd">《Reloaded 重启》</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">艺人：</dt>
+                                        <dd class="fl dl-dd2 adt">鹿晗</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行公司：</dt>
+                                        <dd class="fl adt">星文文化</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行时间：</dt>
+                                        <dd class="fl adt">2015-12-08</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="buyer">
+                                <h4 class="buyer-title">粉丝购买排行</h4>
+                                <ul class="buyer-ul">
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-1.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-2.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-3.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--第二列结束-->
+                        <!--第三列开始-->
+                        <li class="news-r-li fl">
+                            <div class="news-li-img clearfix">
+                                <div>
+                                    <a href="#" class="li-img-a">
+                                        <img src="../images/vchart/buyer-6.jpg" class="li-img">
+                                        <i class="top-2"></i>
+                                    </a>
+                                </div>
+                                <div class="img-list">
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">专辑名称：</dt>
+                                        <dd class="fl dl-dd">《Reloaded 重启》</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">艺人：</dt>
+                                        <dd class="fl dl-dd2 adt">鹿晗</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行公司：</dt>
+                                        <dd class="fl adt">星文文化</dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt class="fl adt">发行时间：</dt>
+                                        <dd class="fl adt">2015-12-08</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="buyer">
+                                <h4 class="buyer-title">粉丝购买排行</h4>
+                                <ul class="buyer-ul">
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-1.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-2.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="buyer-li clearfix">
+                                        <span class="fl li-inner-span">01</span>
+                                        <img src="../images/vchart/inner-li-3.jpg" class="fl fans-pic">
+                                        <div class="buyer-li-text fl">
+                                            <p class="fans-name">用户3E2FDE4129</p>
+                                            <h4 class="fans-h4">贡献值:
+                                                <span class="fans-h4-span" >67</span>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--第三列结束-->
+                    </ul>
+                </div>
+                <!--隐藏版块结束-->
+            </div>
+            <!--资讯盘点右边部分结束-->
+        </div>
+        <!--资讯盘点结束-->
+    </div>
+    <!--内容区宽度控制结束-->
+        <!--周榜冠军开始-->
+        <div class="week">
+            <!--周榜冠军头部开始-->
+            <div class="week-title clearfix">
+                <h3 class="title-h3 week-h3">周榜冠军
+                    <span class="week-title-span">2017年 第29期 (07.10~07.16)</span>
+                    <ul class="fr title-ul clearfix">
+                        <li class="fl title-li"><a href="#" class="title-a">内地篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">港台篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">欧美篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">韩国篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">日本篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">China V Chart</a> </li>
+                    </ul>
+                </h3>
+            </div>
+            <!--周榜冠军头部结束-->
+            <!--周榜冠军内容开始-->
+            <div class="week-inner clearfix">
+                <!--内容区左边开始-->
+                <div class="week-l fl">
+                    <a href="#" class="week-a">
+                        <img src="../images/vchart/week-1.jpg" class="week-img">
+                    </a>
+                </div>
+                <!--内容区左边结束-->
+                <!--内容区右边开始-->
+                <div class="week-r fr clearfix">
+                    <span class="week-span"></span>
+                    <h3 class="week-h3-2">Generation2</h3>
+                    <p class="week-p">--<a href="#" class="week-p-a">王嘉尔(GOT7)</a></p>
+                    <ul class="clearfix week-r-ul">
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">站内完整播放</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">站外完整播放</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">收藏次数</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">下载次数</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">百度热度</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">移动端分享</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">移动端播放</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">移动端缓存</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--内容区右边结束-->
+            </div>
+            <!--周榜冠军内容结束-->
+            <!--隐藏内容开始-->
+            <div class="week-inner-1 clearfix">
+                <!--内容区左边开始-->
+                <div class="week-l fl">
+                    <a href="#" class="week-a">
+                        <img src="../images/vchart/week-2.jpg" class="week-img">
+                    </a>
+                </div>
+                <!--内容区左边结束-->
+                <!--内容区右边开始-->
+                <div class="week-r fr clearfix">
+                    <span class="week-span"></span>
+                    <h3 class="week-h3-2">Generation2</h3>
+                    <p class="week-p">--<a href="#" class="week-p-a">王嘉尔(GOT7)</a></p>
+                    <ul class="clearfix week-r-ul">
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">站内完整播放</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">站外完整播放</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">收藏次数</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">下载次数</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">百度热度</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">移动端分享</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">移动端播放</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                        <li class="fl week-r-li">
+                            <h4 class="week-h4">移动端缓存</h4>
+                            <p class="week-li-p">61999</p>
+                        </li>
+                    </ul>
+                </div>
+            <!--隐藏内容结束-->
+            </div>
+        </div>
+        <!--周榜冠军结束-->
+        <!--一周新歌开始-->
+        <div class="song">
+            <!--新歌头部开始-->
+            <div class="week-title clearfix">
+                <h3 class="title-h3 week-h3 clearfix">一周新歌
+                    <span class="week-title-span">2017年 第29期 (07.10~07.16)</span>
+                    <a href="#" class="fr song-a">TOP11-20</a>
+                    <a href="#" class="fr song-a">TOP1-10</a>
+                </h3>
+            </div>
+            <!--新歌头部结束-->
+            <!--新歌内容区开始-->
+            <div class="song-content">
+                <ul class="song-ul clearfix">
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                    <li class="song-li fl">
+                        <a href="#"  class="song-img-a">
+                            <img src="../images/vchart/song-1.jpg" class="song-img">
+                            <span class="song-span"></span>
+                            <span class="song-span-1">NO.1</span>
+                            <span class="song-span-2">95.61分</span>
+                        </a>
+                        <p><a href="#" class="song-p-a">Generation2</a></p>
+                        <p><a href="#" class="song-p-a1">王嘉尔(GOT7)</a></p>
+                    </li>
+                </ul>
+            </div>
+            <!--新歌内容区结束-->
+        </div>
+        <!--一周新歌结束-->
+        <!--周榜最高纪录开始-->
+        <div class="higher">
+            <!--头部开始-->
+            <div class="week-title clearfix">
+                <h3 class="title-h3 week-h3 clearfix">周榜冠军
+                    <span class="week-title-span"><2017></span>
+                    <span class="week-title-span higher-span-1">上榜MV八项数据中的某一项在当周的数值为V榜历史最高值时，则该项数
+                        据成为V榜最高记录</span>
+                    <ul class="fr title-ul clearfix">
+                        <li class="fl title-li"><a href="#" class="title-a">内地篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">港台篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">欧美篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">韩国篇</a> </li>
+                        <li class="fl title-li"><a href="#" class="title-a">日本篇</a> </li>
+                    </ul>
+                </h3>
+            </div>
+            <!--头部结束-->
+            <ul class="higher-ul clearfix">
+                <li class="higher-li fl">
+                    <a href="#" class="higher-a">
+                        <img src="../images/vchart/higher-1.jpg" class="higher-img">
+                        <span class="higher-span"></span>
+                        <P class="higher-p">绝杀 完整版</P>
+                        <h3 class="higher-h3">战斗少女ATF</h3>
+                        <div class="higher-bg"></div>
+                    </a>
+                    <p class="clearfix higher-p-1">
+                        <span class="song-p-bg fl"> </span>
+                        <span class="fl song-p-span">站内完整播放：</span>
+                        <em class="higher-em">420993</em>
+                    </p>
+                    <p class="higher-p-2">诞生时间：<span class="higher-p-span">2017年第16期</span></p>
+                    <p class="higher-p-2">已保持<em class="p-em">13</em>期</p>
+                </li>
+                <li class="higher-li fl">
+                    <a href="#" class="higher-a">
+                        <img src="../images/vchart/higher-1.jpg" class="higher-img">
+                        <span class="higher-span"></span>
+                        <P class="higher-p">绝杀 完整版</P>
+                        <h3 class="higher-h3">战斗少女ATF</h3>
+                        <div class="higher-bg"></div>
+                    </a>
+                    <p class="clearfix higher-p-1">
+                        <span class="song-p-bg fl"> </span>
+                        <span class="fl song-p-span">站内完整播放：</span>
+                        <em class="higher-em">420993</em>
+                    </p>
+                    <p class="higher-p-2">诞生时间：<span class="higher-p-span">2017年第16期</span></p>
+                    <p class="higher-p-2">已保持<em class="p-em">13</em>期</p>
+                </li>
+                <li class="higher-li fl">
+                    <a href="#" class="higher-a">
+                        <img src="../images/vchart/higher-1.jpg" class="higher-img">
+                        <span class="higher-span"></span>
+                        <P class="higher-p">绝杀 完整版</P>
+                        <h3 class="higher-h3">战斗少女ATF</h3>
+                        <div class="higher-bg"></div>
+                    </a>
+                    <p class="clearfix higher-p-1">
+                        <span class="song-p-bg fl"> </span>
+                        <span class="fl song-p-span">站内完整播放：</span>
+                        <em class="higher-em">420993</em>
+                    </p>
+                    <p class="higher-p-2">诞生时间：<span class="higher-p-span">2017年第16期</span></p>
+                    <p class="higher-p-2">已保持<em class="p-em">13</em>期</p>
+                </li>
+                <li class="higher-li fl">
+                    <a href="#" class="higher-a">
+                        <img src="../images/vchart/higher-1.jpg" class="higher-img">
+                        <span class="higher-span"></span>
+                        <P class="higher-p">绝杀 完整版</P>
+                        <h3 class="higher-h3">战斗少女ATF</h3>
+                        <div class="higher-bg"></div>
+                    </a>
+                    <p class="clearfix higher-p-1">
+                        <span class="song-p-bg fl"> </span>
+                        <span class="fl song-p-span">站内完整播放：</span>
+                        <em class="higher-em">420993</em>
+                    </p>
+                    <p class="higher-p-2">诞生时间：<span class="higher-p-span">2017年第16期</span></p>
+                    <p class="higher-p-2">已保持<em class="p-em">13</em>期</p>
+                </li>
+                <li class="higher-li fl">
+                    <a href="#" class="higher-a">
+                        <img src="../images/vchart/higher-1.jpg" class="higher-img">
+                        <span class="higher-span"></span>
+                        <P class="higher-p">绝杀 完整版</P>
+                        <h3 class="higher-h3">战斗少女ATF</h3>
+                        <div class="higher-bg"></div>
+                    </a>
+                    <p class="clearfix higher-p-1">
+                        <span class="song-p-bg fl"> </span>
+                        <span class="fl song-p-span">站内完整播放：</span>
+                        <em class="higher-em">420993</em>
+                    </p>
+                    <p class="higher-p-2">诞生时间：<span class="higher-p-span">2017年第16期</span></p>
+                    <p class="higher-p-2">已保持<em class="p-em">13</em>期</p>
+                </li>
+                <li class="higher-li fl">
+                    <a href="#" class="higher-a">
+                        <img src="../images/vchart/higher-1.jpg" class="higher-img">
+                        <span class="higher-span"></span>
+                        <P class="higher-p">绝杀 完整版</P>
+                        <h3 class="higher-h3">战斗少女ATF</h3>
+                        <div class="higher-bg"></div>
+                    </a>
+                    <p class="clearfix higher-p-1">
+                        <span class="song-p-bg fl"> </span>
+                        <span class="fl song-p-span">站内完整播放：</span>
+                        <em class="higher-em">420993</em>
+                    </p>
+                    <p class="higher-p-2">诞生时间：<span class="higher-p-span">2017年第16期</span></p>
+                    <p class="higher-p-2">已保持<em class="p-em">13</em>期</p>
+                </li>
+                <li class="higher-li fl">
+                    <a href="#" class="higher-a">
+                        <img src="../images/vchart/higher-1.jpg" class="higher-img">
+                        <span class="higher-span"></span>
+                        <P class="higher-p">绝杀 完整版</P>
+                        <h3 class="higher-h3">战斗少女ATF</h3>
+                        <div class="higher-bg"></div>
+                    </a>
+                    <p class="clearfix higher-p-1">
+                        <span class="song-p-bg fl"> </span>
+                        <span class="fl song-p-span">站内完整播放：</span>
+                        <em class="higher-em">420993</em>
+                    </p>
+                    <p class="higher-p-2">诞生时间：<span class="higher-p-span">2017年第16期</span></p>
+                    <p class="higher-p-2">已保持<em class="p-em">13</em>期</p>
+                </li>
+                <li class="higher-li fl">
+                    <a href="#" class="higher-a">
+                        <img src="../images/vchart/higher-1.jpg" class="higher-img">
+                        <span class="higher-span"></span>
+                        <P class="higher-p">绝杀 完整版</P>
+                        <h3 class="higher-h3">战斗少女ATF</h3>
+                        <div class="higher-bg"></div>
+                    </a>
+                    <p class="clearfix higher-p-1">
+                        <span class="song-p-bg fl"> </span>
+                        <span class="fl song-p-span">站内完整播放：</span>
+                        <em class="higher-em">420993</em>
+                    </p>
+                    <p class="higher-p-2">诞生时间：<span class="higher-p-span">2017年第16期</span></p>
+                    <p class="higher-p-2">已保持<em class="p-em">13</em>期</p>
+                </li>
+            </ul>
+        </div>
+        <!--周榜最高纪录结束-->
+
+    <!--合作伙伴开始-->
+    <div class="partner">
+        <div class="partner-inner">
+            <div class="week-title clearfix">
+                <h3 class="title-h3 week-h3">合作伙伴</h3>
+            </div>
+            <ul class="vc-ul">
+                <li class="vc-li">
+                    <a href="#" class="vc-a fr">更多···</a>
+                    <p class="vc-p">数据来源</p>
+                    <div class="source clearfix">
+                        <a href="#" class="source-a">
+                            <img src="../images/vchart/vc-1.png" class="sourcr-img">
+                            <div class="source-word">
+                                <h3 class="source-h3">音悦台手机客户端</h3>
+                                <p class="source-p">音悦Tai — 让娱乐更美好，最新最全最好看最高清的MV就在你手中。</p>
+                            </div>
+                        </a>
+                        <a href="#"class="source-a">
+                            <img src="../images/vchart/vc-2.jpg" class="sourcr-img">
+                            <div class="source-word">
+                                <h3 class="source-h3">音悦台手机客户端</h3>
+                                <p class="source-p">音悦Tai — 让娱乐更美好，最新最全最好看最高清的MV就在你手中。</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <p class="vc-p">战略合作伙伴</p>
+                    <img src="../images/vchart/vc-3.png">
+                    <img src="../images/vchart/vc-4.png">
+                    <img src="../images/vchart/vc-5.png">
+                </li>
+                <li>
+                    <p class="vc-p">独家卫视合作</p>
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                </li>
+                <li>
+                    <p class="vc-p">网络合作伙伴</p>
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                </li>
+                <li>
+                    <p class="vc-p">平台合作伙伴</p>
+                    <img src="../images/vchart/vc-7.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-7.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-7.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                </li>
+                <li>
+                    <p class="vc-p">电视台合作伙伴</p>
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                </li>
+                <li>
+                    <p class="vc-p">自媒体合作伙伴</p>
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                    <img src="../images/vchart/vc-6.jpg" class="vc-img">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--合作伙伴结束-->
+    <!--footer开始-->
+    <div class="footer_main">
+        <p class="footer_links">
+            <a href="article3.html">关于我们</a>
+            <span></span>
+            <a href="joinus.html">人才招聘</a>
+            <span></span>
+            <a href="article1.html">联系我们</a>
+            <span></span>
+            <a href="links.html">友情链接</a>
+            <span></span>
+            <a href="article4.html">版权声明</a>
+            <span></span>
+            <a href="service.html">客服中心</a>
+        </p>
+
+        <p class="footer_copy">
+            <a href="#"><img src="../images/culture.png" alt=""
+                             style="vertical-align: top;width:25px;height:25px;margin-right:3px;"></a>
+            Copyright © 2009 - 2017 yinyuetai.com 广播电视节目制作经营 许可证编号(京)字第1891号 |
+            <a href="#">京网文[2014]2037-287号</a>
+            <a href="#">网络视听许可证0110413号</a>
+            <br>
+            <a href="#"><img src="../images/ghs.png" alt="" style="vertical-align: top;"> 京公网安备11010502014900号 </a>
+            | 京ICP备11024134号-1 | 京ICP证060716号 | 出版物经营许可证
+            <a href="#">新出发京批字第直160022号</a>
+            | 增值电信业务经营许可证B2-20140501
+            <a href="#"><img src="../images/biaoshi.gif" alt="" style="vertical-align: top; margin-top: -25px;"></a>
+
+        </p>
+    </div>
+    <!--footer结束-->
+</body>
+</html>

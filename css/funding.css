@@ -1,0 +1,845 @@
+﻿/*整体*/
+body{
+    background-color: #f5f5f5;
+}
+/*整体*/
+
+/*众筹头部开始*/
+#crowd-header{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: solid 1px #eeeeee;
+    background-color: #ffffff;
+    margin-top: 40px;
+}
+
+
+
+/*众筹头部定宽开始*/
+.crowd-header-width{
+    width: 1200px;
+    margin: auto;
+}
+/*众筹头部定宽结束*/
+
+/*众筹头部左侧开始*/
+.crowd-header-left{
+
+}
+.crowd-header-left ul li{
+    margin-right: 70px;
+    font-size: 16px;
+}
+.crowd-header-left ul li a:hover{
+    color: #fd6f6e;
+}
+/*众筹头部左侧结束*/
+
+/*众筹头部搜索框开始*/
+.crowd-header-seach{
+    width: 326px;
+    height: 36px;
+    margin-left: 80px;
+    margin-top: 22px;
+}
+.seach-border{
+    width: 324px;
+    height: 34px;
+    border-radius: 20px;
+    border: solid 1px #e4e4e4;
+    overflow: hidden;
+}
+.seach-border input{
+    display: block;
+    width: 250px;
+    height: 24px;
+    padding: 5px 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 0;
+    outline:olive;
+}
+.seach-border a{
+    display: block;
+    width: 26px;
+    height: 36px;
+}
+.seach-border a img{
+    display: block;
+    width: 22px;
+    height: 22px;
+    padding-top: 5px;
+}
+/*众筹头部搜索框结束*/
+
+/*众筹头部右侧开始*/
+.crowd-header-right li{
+    height: 80px;
+    width: 80px;
+    font-size: 14px;
+    position: relative;
+}
+.crowd-header-right li a:hover{
+    color: #fc6e6e;
+}
+.crowd-header-right li:last-child{
+    padding-left: 53px;
+}
+.header-right-img1{
+    display: inline-block;
+    width: 24px;
+    height: 18px;
+    margin: 31px 4px 0 0;
+    background: url("../images/zhongchou/zhongchou-sprite1.png")
+    -114px -3px no-repeat ;
+}
+.header-right-img2{
+    width: 19px;
+    height: 19px;
+    margin: 29px 4px 0 0;
+    background: url("../images/zhongchou/zhongchou-sprite1.png")
+    -28px -1px no-repeat;
+}
+.crowd-header-right b{
+    position: absolute;
+    top: 24px;
+    left: 52px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    width: 14px;
+    background: #fd6f6e;
+    border-radius: 50%;
+}
+/*众筹头部右侧结束*/
+
+/*众筹头部结束*/
+
+
+/*众筹主体开始*/
+#crowd-main{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+/* 众筹主体大图片开始*/
+.crowd-main-top{
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.crowd-main-top div{
+    margin: 0 auto;
+    margin-top: 4px;
+    position:absolute;
+    bottom: 0px;
+}
+.crowd-main-top-left{
+    display: none;
+    width: 40px;
+    height: 100px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -620px -59px;
+    position: absolute;
+    left:0;
+    top: 150px;
+}
+.crowd-main-top:hover .crowd-main-top-left{
+    display: block;
+}
+.crowd-main-top-right{
+    display:none;
+    width: 40px;
+    height: 100px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -660px -59px;
+    position: absolute;
+    right:0;
+    top: 150px;
+}
+.crowd-main-top:hover .crowd-main-top-right{
+    display: block;
+}
+.ball{
+    height: 20px;
+    text-align: center;
+    width: 100%;
+}
+.ball span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+/* 众筹主体大图片结束*/
+
+/*音乐众筹大块开始*/
+#funding{
+    width: 1200px;
+    height: 1028px;
+}
+
+/*音乐众筹左侧开始*/
+.funding-left{
+    width: 860px;
+    height: 1028px;
+}
+.funding-left header{
+    padding: 18px 0 14px 0;
+    height: 38px;
+}
+.funding-left header h3{
+    width: 118px;
+    height: 38px;
+    margin-right: 70px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat 0 -117px;
+}
+.funding-left header span{
+    display: block;
+    width: 50px;
+    height: 20px;
+    margin-top: 9px;
+    float: right;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -134px -8px;
+}
+/*音乐众筹左侧导航开始*/
+.funding-left-nav{
+    width: 296px;
+    height: 38px;
+}
+.funding-left-nav li{
+    height: 38px;
+}
+.funding-left-nav li a{
+    display: inline-block;
+    line-height: 38px;
+    font-size: 16px;
+    padding: 0 12px;
+    color: #666666;
+}
+.funding-left-nav li a:hover{
+    color: #fd6f6e;
+    text-decoration: underline;
+}
+/*音乐众筹左侧导航结束*/
+.funding-left-img{
+    margin-top:5px;
+    width: 860px;
+}
+.funding-left-img li{
+    width: 269px;
+    height: 300px;
+    margin-right: 26px;
+    margin-bottom: 27px;
+    background: #fff;
+    box-shadow: 1px 1px 1px -1px #dadada;
+}
+.funding-left-img-border{
+    margin-right: 0!important;
+}
+.funding-left-img li h4{
+    font-size: 14px;
+    color: #333;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 0 0 10px;
+}
+.funding-left-img li h4 a{
+    width: 192px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.funding-left-img li a{
+    display:block;
+    width: 269px;
+    height: 170px;
+    overflow: hidden;
+}
+.funding-left-img li a img:hover{
+    transform: scale(1.3);
+}
+.funding-left-img li a:hover{
+    color: #fc6e6e;
+}
+.funding-left-img li a img{
+    width: 269px;
+    transition: 1s .2s;
+}
+.list-title{
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+.list-title a{
+    display: block;
+    line-height: 32px;
+    padding: 0 10px;
+}
+.funding-left-img-span{
+    display: block;
+    margin-top: 9px;
+    width: 60px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    background: #68efad;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+@font-face {
+    font-family: "simsun";
+}
+.funding-left-img li span i{
+    font-style: normal;
+    display: block;
+    width: 54px;
+    height: 26px;
+    padding-left: 4px;
+    font-family: simsun;
+    color: #fff;
+}
+.list-title{
+    width: 269px;
+    height: 32px;
+}
+.list-title a{
+    line-height: 32px;
+    padding: 0 10px;
+}
+.funding-over{
+    padding: 0 12px;
+}
+.funding-over section:first-child{
+    line-height: 20px;
+    font-size: 12px;
+    color: #a6a6a6;
+    padding: 4px 0 8px 0;
+}
+.funding-over section b{
+    font-weight:normal;
+    color: #a6a6a6;
+}
+.funding-over section b i{
+    font-style: normal;
+    color: #fc6e6e;
+}
+
+.funding-over-p{
+    height: 8px;
+    width: 242px;
+    background: #eaeaea;
+    border-radius: 4px;
+    margin-bottom: 6px
+}
+.funding-over-p span:nth-child(1){
+    height: 8px;
+    width: 109px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 2px solid#eaeaea ;
+    background: #fd6f6e;
+}.funding-over-p span:nth-child(2){
+     height: 8px;
+     width: 63px;
+     border-right: 2px solid#eaeaea ;
+     background: #fd6f6e;
+ }
+.funding-over-p span:nth-child(3){
+    width: 64px; ;
+    height: 8px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: 2px solid#eaeaea ;
+    background: #fd6f6e;
+}
+/*音乐众筹左侧结束*/
+
+/*音乐众筹右侧开始*/
+.funding-right{
+    width: 312px;
+    overflow: hidden;
+}
+.funding-right h3{
+    padding: 20px 0 16px 0;
+    height: 38px;
+    background: #F5F5F5;
+}
+.funding-right-h3 a{
+    display: block;
+    width: 118px;
+    height: 38px;
+    margin-right: 70px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -590px -234px;
+}
+/*音乐众筹右侧文章开始*/
+
+.funding-right-news h4{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #272727;
+}
+.funding-right-news  p{
+    width: 302px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid#ffffff;
+}
+.funding-right-news  p a span{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 302px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    background: url("../images/zhongchou/funding-right-news1.png")
+    0 -65px;
+}
+.funding-right-news p  a img{
+    width: 100%;
+    min-height: 100%;
+}
+.funding-right-news-ul{
+    width: 624px;
+    height: 455px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px -1px #dadada;
+    overflow: hidden;
+    margin-left: -312px;
+}
+.funding-right-news-ul ul:first-child{
+    width: 312px;
+    height: 455px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px -1px #dadada;
+}
+.funding-right-news-ul ul:last-child{
+    width: 312px;
+    height: 455px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px -1px #dadada;
+}
+.funding-right-news-ul li{
+    margin: 0 10px;
+    line-height: 30px;
+    color: #333;
+    font-size: 14px;
+}
+.funding-right-news-ul li a{
+    display: block;
+    width: 290px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.funding-right-news-ul li a:hover{
+    color: #fc6e6e;
+}
+.news-ball{
+    width: 312px;
+    height: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+}
+.news-ball span:nth-child(1){
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: #dadada;
+    margin-left: 147px;
+    margin-right: 8px;
+}
+.news-ball span.active{
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background:#999999;
+}
+/*音乐众筹榜单开始*/
+.funding-right-list{
+    width: 314px;
+    min-height: 40px;
+}
+.funding-right-list header{
+    text-align: center;
+    height: 40px;
+    color:#272727;
+    font-size: 14px;
+    font-weight:bold;
+    background-color: #ffffff;
+}
+.funding-right-list header h4{
+    text-align: center;
+    line-height: 40px;
+    width: 178px;
+    margin-left: 66px;
+}
+.funding-right-list header span{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border:1px solid #b9b9b9;
+    line-height: 14px;
+    margin-top: 13px;
+}
+.funding-right-list header span a{
+    color: #b9b9b9;
+}
+.funding-right-list h3{
+    height: 40px;
+    padding: 0 64px;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-weight: normal;
+}
+.funding-right-list h3 p{
+    width: 184px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 ;
+    text-align: center;
+    border: 1px solid#cccccc;
+    border-radius: 20px;
+}
+.funding-right-list h3 p a:nth-child(1){
+    text-align: center;
+    border: 1px solid;
+    padding: 5px 7px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+.funding-right-list h3 p a:nth-child(2){
+    text-align: center;
+    border: 1px solid;
+    padding: 5px 15px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.funding-right-list h3 p a:hover{
+    color: #fd6f6e;
+}
+
+.funding-right-list h3 p a.active{
+    color: #fd6f6e;
+}
+
+.funding-right-list-ul{
+    width: 633px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px -1px #dadada;
+}
+.funding-right-list-ul ul{
+    width: 311px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px -1px #dadada;
+}
+.funding-right-list-ul ul li{
+    height: 49px;
+    line-height: 49px;
+    margin: 0 6px 0 6px;
+}
+.funding-right-list-ul ul li:nth-child(1) i{
+     display: inline-block;
+     height: 22px;
+     width: 37px;
+     background: url("../images/zhongchou/zhongchou-sprite2.png")
+     no-repeat -780px -57px;
+     margin-right: 20px;
+     margin-top: 6px;
+ }
+.funding-right-list-ul ul li:nth-child(2) i{
+    display: inline-block;
+    height: 22px;
+    width: 37px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -780px -105px;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+.funding-right-list-ul ul li:nth-child(3) i{
+    display: inline-block;
+    height: 22px;
+    width: 37px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -780px -151px;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+.funding-right-list-ul ul li:nth-child(4) i{
+    display: inline-block;
+    height: 22px;
+    width: 37px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -780px -198px;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+.funding-right-list-ul ul li:nth-child(5) i{
+    display: inline-block;
+    height: 22px;
+    width: 37px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -780px -245px;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+
+.funding-right-list-ul ul li a{
+    display: block;
+    width: 240px;
+    height: 100%;
+    line-height: 100%;
+}
+.funding-right-list-ul ul li a p:hover{
+    color:#fc6e6e;
+}
+.funding-right-list-ul ul li a img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+}
+.funding-right-list-ul ul li a p{
+    width: 110px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    margin: 8px 0 8px 10px;
+    color: #333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.funding-right-list-ul ul li a em{
+    font-style: normal;
+    display: block;
+    color: #fd6f6e;
+    font-size: 16px;
+    text-align: right;
+    padding: 12px 20px 12px 0;
+}
+/*音乐众筹右侧结束*/
+/*音乐众筹大块结束*/
+
+
+
+/*音乐众筹告白季开始 true love block start*/
+
+/*音乐众筹告白季头部开始 true block header start*/
+.true-love{
+    width: 1200px;
+    height: 558px;
+}
+.true-love h3{
+    height: 38px;
+    padding: 18px 0 14px 0;
+}
+.true-love h3 span{
+    display: block;
+    height: 38px;
+    width: 143px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -326px -234px;
+}
+.true-love ul{
+    width: 1200px;
+    height: 516px;
+
+}
+.true-love ul li{
+    width: 280px;
+    height: 230px;
+    background: #ffffff;
+    box-shadow: 1px 1px 1px -1px #dadada;
+    margin: 0 26px 28px 0;
+}
+.true-love-li-border{
+    margin-right: 0!important;
+}
+.true-love-litop{
+    height: 160px;
+    width: 100%;
+    position: relative;
+}
+.true-love-litop a{
+    glyph-orientation-vertical: 164px;
+}
+.true-love-litop a img{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.true-love-litop-icon{
+    display: block;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 2px;
+    line-height: 20px;
+    color: #cccccc;
+    background: url("../images/zhongchou/true-love-litop-icon.png")
+    repeat-x;
+    padding-top: 90px;
+}
+.true-love-litop-icon i{
+    display: inline-block;
+    height: 20px;
+    font-style: normal;
+    padding-left: 24px;
+    background: url("../images/zhongchou/true-love-litop-icon1.png")
+    no-repeat;
+    margin-left: 158px;
+}
+.true-love-litop-icon em{
+    font-style: normal;
+    display: inline-block;
+    padding-left: 24px;
+    height: 20px;
+    line-height: 20px;
+    background: url("../images/zhongchou/true-love-litop-icon2.png")
+    no-repeat;
+}
+.true-love-li-a{
+    display: block;
+    width: 262px;
+    height: 14px;
+    line-height: 14px;
+    margin: 8px 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.true-love-li-a:hover{
+    color: #fc6e6e;
+}
+.true-love-libottom{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.true-love-libottom img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.true-love-libottom span{
+    height: 30px;
+    line-height: 30px;
+    margin-left: 8px;
+    color: #666666;
+    /*font-family: simsun;*/
+}
+.true-love-litop span{
+    display: none;
+    width: 56px;
+    height: 56px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -509px -209px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: -26px;
+    margin-top: -26px;
+}
+.true-love-litop:hover span{
+    display: block;
+}
+/*音乐众筹告白季头部结束 true block headr over*/
+/*音乐众筹告白季结束 true love block over*/
+
+/*最新入驻开始 new entry start*/
+.new-entry{
+    width: 1200px;
+    height: 594px;
+}
+.new-entry h4{
+    height: 38px;
+    padding: 14px 0 14px;
+}
+.new-entry h4 span{
+    display: block;
+    width: 86px;
+    height: 38px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -2px -3px;
+}
+.new-entry ul{
+    height: 526px;
+    width: 1200px;
+}
+.new-entry ul li{
+    width: 218px;
+    height: 240px;
+    background: #fff;
+    margin-right: 27px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 0 #e8e8e8;
+}
+.new-entry ul li a:hover{
+    color: #fc6e6e!important;
+}
+.new-entry-ul-li-border{
+    margin-right: 0!important;
+}
+.new-entry ul li a:first-child{
+    margin: 20px 49px 0;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+}
+.new-entry ul li a:first-child img{
+    display: inline-block;
+    border-radius: 50%;
+    width: 100%;
+    height: 120px;
+}
+
+.new-entry ul li a:nth-child(2){
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    color: #666666;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px dashed #e6e6e6;
+}
+.new-entry ul li span{
+    display: block;
+    height: 48px;
+    width: 218px;
+    background: url("../images/zhongchou/zhongchou-sprite2.png")
+    no-repeat -558px 10px;
+}
+/*最新入驻结束 new entry over*/
+
+/*众筹主体结束*/
+
+.top_main .top_left .top_nav>:nth-child(1) a { 
+    color: #ccc; 
+}
+.top_main .top_left .top_nav>:nth-child(6) a { 
+    color: #cf9; 
+}

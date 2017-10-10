@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>shop</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/shop_style.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/shop_effect.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/top_nav.css">
+    <script src="../js/jquery-1.7.2.js"></script>
+    <script>
+        $(function (){
+
+
+            (function(){
+                var timer = null;
+                function autoPlay(){
+
+                    var i = 0;
+                    clearInterval(timer);
+                    timer = setInterval(function (){
+                        
+                        if ( i == 5 ) i = 0;
+                        i++;
+                        if ( i == 5 ) i = 0;
+                        $('.banner_point ul li').removeClass('active');
+                        $('.banner_point ul li').eq(i).addClass('active');
+                        $('.banner_img ul').stop().animate({
+                            'marginLeft': -i*1200+'px'
+                        },1000);
+
+                    },3000);
+                }
+                autoPlay();
+
+                $('.banner_point ul li').click(function (){
+                    clearInterval(timer);
+                    $('.banner_point ul li').removeClass('active');
+                    $(this).addClass('active');
+                    
+                    $('.banner_img ul').stop().animate({
+                            'marginLeft': -$(this).index()*1200+'px'
+                    },1000);
+                });
+                $('.banner_point ul li').mouseout(function (){
+                    autoPlay();
+                });
+
+
+                $('.banner_arrow-left').click(function (){
+                    clearInterval(timer);
+
+                    var marginLeft = parseInt($(".banner_img ul").css('marginLeft'));
+                    if (marginLeft>0) { marginLeft = -6000;}
+                    marginLeft+=1200
+                    if (marginLeft>0) { marginLeft = -6000;}
+
+                    $('.banner_point ul li').removeClass('active');
+                    $('.banner_point ul li').eq(-marginLeft/1200).addClass('active');
+                    
+                    $(".banner_img ul").stop().animate({
+                            'marginLeft': marginLeft+'px'
+                        },1000);
+                });
+                $('.banner_arrow-left').mouseout(function (){
+                    autoPlay();
+                });
+                $('.banner_arrow-right').click(function (){
+                    clearInterval(timer);
+
+                    var marginLeft = parseInt($(".banner_img ul").css('marginLeft'));
+                    if (marginLeft<=-6000) { marginLeft = 0;}
+                    marginLeft-=1200;
+                    if (marginLeft<=-6000) { marginLeft = 0;}
+
+                    $('.banner_point ul li').removeClass('active');
+                    $('.banner_point ul li').eq(-marginLeft/1200).addClass('active');
+                    
+                    $(".banner_img ul").stop().animate({
+                            'marginLeft': marginLeft+'px'
+                        },1000);
+                });
+                $('.banner_arrow-right').mouseout(function (){
+                    autoPlay();
+                });
+            })(); 
+
+            (function (){
+                $('.content5_right_choose a').mouseover(function (){
+                    $('.content5_right_choose a').removeClass('active');
+                    $(this).addClass('active');
+                    $('.content5_right_b_box>ul').addClass('active2');
+                    $('.content5_right_b_box>ul').eq($(this).index()).removeClass('active2');
+                });
+            })();
+
+        });
+    </script>
+</head>
+<body>
+<div class="back_top"><a href="javascript:;"><img src="../images/returntop.png" alt=""></a></div>
+
+<!--侧面固定客服部分------------------------------>
+<ul class="service">
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+</ul>
+<!--顶部导航栏------------------------------>
+<header class="header_bg"><!--黑色背景部分--->
+    <section class="header_content clearfix"><!--顶部导航栏内容部分--->
+        <div class="fl">
+            <a href="../index.html"><img src="../images/shop/headLogo.png"></a>
+        </div>
+        <div class="header_content_button fr">
+            <ul class="clearfix">
+                <li><a href="#">官方微博</a></li>
+                <li>
+                    <a href="#">关注微信</a>
+                    <div class="header_content_button_scan"><!--二维码-->
+                        <img src="../images/shop/scan2.png">
+                        <p>扫一扫</p>
+                        <p>了解最新商品信息</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">正品保证</a>
+                    <div class="header_content_button_scan"><!--二维码-->
+                        <img src="../images/shop/scan1.png">
+                        <p>扫一扫</p>
+                        <p>了解最新商品信息</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</header>
+<!--顶部搜索栏------------------------------>
+<section class="search_bg"><!--黑色背景部分--->
+    <section class="search_content clearfix"><!--搜索栏主体--->
+        <div class="search_logo fl">
+            <a href="#"><img src="../images/shop/search_logo.png"> </a>
+        </div>
+        <form class="fl"><!--搜索栏输入框--->
+            <label><input type="text" class="search_input" placeholder="搜索偶像、商品"></label>
+        </form>
+        <a class="search_button" href="#"></a><!--放大镜--->
+        <div class="search_register fr">
+            <ul>
+                <li><a href="#">登录</a></li>
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">购物车</a></li>
+            </ul>
+        </div>
+    </section>
+</section>
+<!--菜单栏------------------------------>
+<section class="menu_bg"><!--黑色背景部分--->
+    <section class="menu_content clearfix"><!--菜单栏主体--->
+        <div class="menu_button1 fl"><!--艺人分类按钮--->
+            <a href="#">艺人分类</a>
+            <div class="menu_button1_hidden clearfix"><!--艺人分类弹出部分--->
+                <ul class="fl">
+                    <li><a href="#">韩国></a></li>
+                    <li><a href="#">内地></a></li>
+                    <li><a href="#">港台></a></li>
+                    <li><a href="#">日本></a></li>
+                    <li><a href="#">欧美></a></li>
+                    <li><a href="#">其他></a></li>
+                </ul>
+                <ul class="fl">
+                    <li><a href="#">&nbsp;</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                    <li><a href="#">赤西仁</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                </ul>
+                <ul class="fl">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu_button fl">
+            <ul class="clearfix">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="#">专辑</a></li>
+                <li><a href="#">明星周边</a></li>
+                <li><a href="#">明星同款</a></li>
+                <li><a href="#">个护美妆</a></li>
+                <li><a href="#">影漫周边</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">服装配饰</a></li>
+            </ul>
+        </div>
+    </section>
+</section>
+<!--广告图------------------------------>
+<div  class="banner">
+    <div class="banner_arrow-left"></div>
+    <div class="banner_arrow-right"></div>
+    <div class="banner_img">
+        <ul class="clearfix">
+            <li><a href="#"><img src="../images/shop/AD.jpg"> </a></li>
+            <li><a href="#"><img src="../images/shop/AD1.jpg"> </a></li>
+            <li><a href="#"><img src="../images/shop/AD2.jpg"> </a></li>
+            <li><a href="#"><img src="../images/shop/AD3.jpg"> </a></li>
+            <li><a href="#"><img src="../images/shop/AD4.jpg"> </a></li>
+            <li><a href="#"><img src="../images/shop/AD.jpg"> </a></li>
+        </ul>
+    </div>
+    <div class="banner_point clearfix">
+        <ul>
+            <li class="active">●</li>
+            <li>●</li>
+            <li>●</li>
+            <li>●</li>
+            <li>●</li>
+        </ul>
+    </div>
+</div>
+<!--主题内容------------------------------->
+<!--追星必备------------------------------>
+<div class="tittle1"><!--标题--></div>
+<section class="content1 clearfix">
+    <ul class="clearfix fl">
+        <li>
+            <a href="#">
+                <img src="../images/shop/content1_1.jpg">
+                <p>官方应援手灯专区</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content1_2.jpg">
+                <p>官方应援手灯专区</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content1_3.jpg">
+                <p>签名商品专区</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content1_4.jpg">
+                <p>官方DVD专区</p>
+            </a>
+        </li>
+    </ul>
+    <div class="fr">
+        <img src="../images/shop/content1_5.jpg">
+    </div>
+</section>
+<!--top榜------------------------------>
+<div class="tittle2"><!--标题-->
+    <a href="#" class="content2_tittle_button1">明星榜</a>
+    <a href="#" class="content2_tittle_button2">商品榜</a>
+</div>
+<section class="content2">
+    <ul class="clearfix">
+        <li>
+            <a href="#">
+                <img src="../images/shop/content2_1.jpg">
+                <p>GOT7</p>
+                <p>销量：1269</p>
+                <div class="content2_number1"><!--左上角序号-->
+                    <span>1</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content2_2.jpg">
+                <p>EXO</p>
+                <p>销量：349</p>
+                <div class="content2_number1"><!--左上角序号-->
+                    <span>2</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content2_3.jpg">
+                <p>NCT</p>
+                <p>销量：302</p>
+                <div class="content2_number1"><!--左上角序号-->
+                    <span>3</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content2_4.jpg">
+                <p>鹿晗</p>
+                <p>销量：182</p>
+                <div class="content2_number2"><!--左上角序号-->
+                    <span>4</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content2_5.jpg">
+                <p>Tara</p>
+                <p>销量：149</p>
+                <div class="content2_number2"><!--左上角序号-->
+                    <span>5</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content2_6.jpg">
+                <p>G-dragon</p>
+                <p>销量：68</p>
+                <div class="content2_number2"><!--左上角序号-->
+                    <span>6</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content2_7.jpg">
+                <p>BigBang</p>
+                <p>销量：63</p>
+                <div class="content2_number2"><!--左上角序号-->
+                    <span>7</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/shop/content2_8.jpg">
+                <p>防弹少年团</p>
+                <p>销量：50</p>
+                <div class="content2_number2"><!--左上角序号-->
+                    <span>8</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+<!--新品首发------------------------------>
+<div class="tittle tittle3"></div>
+<section class="content3 clearfix">
+    <ul>
+        <!------>
+        <li>
+            <a href="#" class="clearfix">
+                <div class="content3_box_left fl">
+                    <img src="../images/shop/content3_1.jpg">
+                </div>
+                <div class="content3_box_right fl">
+                    <p>【众筹预定】JJ project<br/>JB 朴珍荣 新专辑</p>
+                    <p>¥50</p>
+                    <span></span><i>3</i>
+                </div>
+            </a>
+        </li>
+        <!------>
+        <li>
+            <a href="#" class="clearfix">
+                <div class="content3_box_left fl">
+                    <img src="../images/shop/content3_2.jpg">
+                </div>
+                <div class="content3_box_right fl">
+                    <p>【众筹预定】Jessica 新<br/>专辑</p>
+                    <p>¥50</p>
+                    <span></span><i>0</i>
+                </div>
+            </a>
+        </li>
+        <!------>
+        <li>
+            <a href="#" class="clearfix">
+                <div class="content3_box_left fl">
+                    <img src="../images/shop/content3_3.jpg">
+                </div>
+                <div class="content3_box_right fl">
+                    <p>【全款预定】Jessica郑<br/>秀妍封面 1st Look杂志</p>
+                    <p>¥22</p>
+                    <span></span><i>2</i>
+                </div>
+            </a>
+        </li>
+        <!------>
+        <li>
+            <a href="#" class="clearfix">
+                <div class="content3_box_left fl">
+                    <img src="../images/shop/content3_4.jpg">
+                </div>
+                <div class="content3_box_right fl">
+                    <p>【全款预定】<br/>BLACKPINK 封面 韩国版</p>
+                    <p>¥90</p>
+                    <span></span><i>1</i>
+                </div>
+            </a>
+        </li>
+        <!------>
+        <li>
+            <a href="#" class="clearfix">
+                <div class="content3_box_left fl">
+                    <img src="../images/shop/content3_5.jpg">
+                </div>
+                <div class="content3_box_right fl">
+                    <p>【现货包邮】黛汐魅水<br/>蜜桃水润盈透补水4件套</p>
+                    <p>¥119</p>
+                    <span></span><i>3</i>
+                </div>
+            </a>
+        </li>
+        <!------>
+        <li>
+            <a href="#" class="clearfix">
+                <div class="content3_box_left fl">
+                    <img src="../images/shop/content3_6.jpg">
+                </div>
+                <div class="content3_box_right fl">
+                    <p>【现货包邮】Daisymee<br/>黛汐魅水蜜桃水润盈透</p>
+                    <p>¥99</p>
+                    <span></span><i>2</i>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+<!--大家喜欢------------------------------>
+<div class="we-like_bg"><!--大家喜欢背景色-->
+    <div class="tittle tittle4"></div>
+    <section class="content4">
+        <ul>
+            <!------->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content4_1.jpg"/>
+                    <p>【包邮】鹿晗2016 Reloaded<br/>全国巡回演唱会 官方应援手灯</p>
+                    <div class="content4_bottom">
+                        <i>¥157</i>
+                        <span></span>
+                        <i>1189</i>
+                    </div>
+                </a>
+            </li>
+            <!------->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content4_2.jpg"/>
+
+                    <p>【全款现货】鹿晗《Reloaded<br/>重启（CD+DVD）》</p>
+
+                    <div class="content4_bottom">
+                        <i>¥62</i>
+                        <span></span>
+                        <i>792</i>
+                    </div>
+                </a>
+            </li>
+            <!------->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content4_3.jpg"/>
+
+                    <p>黄子韬 先行单曲专辑<br/>《Adore》</p>
+
+                    <div class="content4_bottom">
+                        <i>¥15.2</i>
+                        <span></span>
+                        <i>744</i>
+                    </div>
+                </a>
+            </li>
+            <!------->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content4_4.jpg"/>
+
+                    <p>【全国现货-包邮】鹿晗2016<br/> Reloaded 全国巡回演唱会 有</p>
+
+                    <div class="content4_bottom">
+                        <i>¥397</i>
+                        <span></span>
+                        <i>506</i>
+                    </div>
+                </a>
+            </li>
+            <!------->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content4_5.jpg"/>
+                    <p>【全款现货】EXO正规三辑<br/>《EX'ACT》</p>
+                    <div class="content4_bottom">
+                        <i>¥29.9</i>
+                        <span></span>
+                        <i>416</i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+<!--推荐专辑------------------------------>
+<div class="tittle tittle5">
+    <a href="#" class="tittle5_button1"></a>
+    <div class="tittle5_B"></div>
+    <!--专辑榜-->
+    <a href="#" class="tittle5_button2"></a>
+</div>
+<section class="content5 clearfix">
+    <div class="content5_left fl">
+        <a href="#">
+            <img src="../images/shop/content5_1.jpg">
+        </a>
+    </div>
+    <div class="content5_middle fl">
+        <ul>
+            <!---->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content5_M1.jpg">
+
+                    <div class="content5_middle_bottom">
+                        <p>少女时代 正规六辑</p>
+                        <span></span>
+                        <i>6</i>
+                    </div>
+                </a>
+            </li>
+            <!---->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content5_M2.jpg">
+
+                    <div class="content5_middle_bottom">
+                        <p>CNBLUE 郑容和 新专辑</p>
+                        <span></span>
+                        <i>6</i>
+                    </div>
+                </a>
+            </li>
+            <!---->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content5_M3.jpg">
+                    <div class="content5_middle_bottom">
+                        <p>WANNA ONE 首张迷你..</p>
+                        <span></span>
+                        <i>2</i>
+                    </div>
+                </a>
+            </li>
+            <!---->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content5_M4.jpg">
+                    <div class="content5_middle_bottom">
+                        <p>亲笔签名 郑容和 迷你1...</p>
+                        <span></span>
+                        <i>1</i>
+                    </div>
+                </a>
+            </li>
+            <!---->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content5_M5.jpg">
+                    <div class="content5_middle_bottom">
+                        <p>金Samuel 出道SOLO专...</p>
+                        <span></span>
+                        <i>5</i>
+                    </div>
+                </a>
+            </li>
+            <!---->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content5_M1.jpg">
+                    <div class="content5_middle_bottom">
+                        <p>郑帝元 ONE 单曲专辑</p>
+                        <span></span>
+                        <i>3</i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content5_right fl">
+        <div class="content5_right_choose clearfix">
+            <a class="active" href="#">内地销量榜</a>
+            <a href="#">进口销量榜</a>
+        </div>
+        <div class="content5_right_b_box">
+            <ul class="content5_right_album1 active1">
+                <!--1-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active1 clearfix">
+                            <p class="content5_right_active-number fl">1</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R1active.jpg"/>
+                            <p class="content5_right_active-word fl">《reload重启》</p>
+                        </div>
+                        <div class="content5_right_no-active active2 clearfix">
+                            <p class="content5_right_number fl">1</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R1active.jpg"/>
+                            <p class="content5_right_word fl">《reload重启》</p>
+                        </div>
+                    </a>
+                </li>
+                <!--2-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active2 clearfix">
+                            <p class="content5_right_active-number fl">2</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R2active.jpg"/>
+                            <p class="content5_right_active-word fl">《新的心跳》</p>
+                        </div>
+                        <div class="content5_right_no-active active1 clearfix">
+                            <p class="content5_right_number fl">2</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R2active.jpg"/>
+                            <p class="content5_right_word fl">《新的心跳》</p>
+                        </div>
+                    </a>
+                </li>
+                <!--3-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active2 clearfix">
+                            <p class="content5_right_active-number fl">3</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R3active.jpg"/>
+                            <p class="content5_right_active-word fl">《日常》</p>
+                        </div>
+                        <div class="content5_right_no-active active1 clearfix">
+                            <p class="content5_right_number fl">3</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R3active.jpg"/>
+                            <p class="content5_right_word fl">《日常》</p>
+                        </div>
+                    </a>
+                </li>
+                <!--4-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active2 clearfix">
+                            <p class="content5_right_active-number fl">4</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R4active.jpg"/>
+                            <p class="content5_right_active-word fl">薛之谦 初学者</p>
+                        </div>
+                        <div class="content5_right_no-active active1 clearfix">
+                            <p class="content5_right_number fl">4</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R4active.jpg"/>
+                            <p class="content5_right_word fl">薛之谦 初学者</p>
+                        </div>
+                    </a>
+                </li>
+                <!--5-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active2 clearfix">
+                            <p class="content5_right_active-number fl">5</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R5active.jpg"/>
+                            <p class="content5_right_active-word fl">《目标（豪华版）》</p>
+                        </div>
+                        <div class="content5_right_no-active active1 clearfix">
+                            <p class="content5_right_number fl">5</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R5active.jpg"/>
+                            <p class="content5_right_word fl">《目标（豪华版）》</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="content5_right_album2 active2">
+                <!--1-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active1 clearfix">
+                            <p class="content5_right_active-number fl">1</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R1.jpg"/>
+                            <p class="content5_right_active-word fl">《THE WAR》</p>
+                        </div>
+                        <div class="content5_right_no-active active2 clearfix">
+                            <p class="content5_right_number fl">1</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R1.jpg"/>
+                            <p class="content5_right_word fl">《THE WAR》</p>
+                        </div>
+                    </a>
+                </li>
+                <!--2-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active2 clearfix">
+                            <p class="content5_right_active-number fl">2</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R2.jpg"/>
+                            <p class="content5_right_active-word fl">《THE WAR》</p>
+                        </div>
+                        <div class="content5_right_no-active active1 clearfix">
+                            <p class="content5_right_number fl">2</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R2.jpg"/>
+                            <p class="content5_right_word fl">《THE WAR》</p>
+                        </div>
+                    </a>
+                </li>
+                <!--3-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active2 clearfix">
+                            <p class="content5_right_active-number fl">3</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R3.jpg"/>
+                            <p class="content5_right_active-word fl">《ONE DAY》</p>
+                        </div>
+                        <div class="content5_right_no-active active1 clearfix">
+                            <p class="content5_right_number fl">3</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R3.jpg"/>
+                            <p class="content5_right_word fl">《ONE DAY》</p>
+                        </div>
+                    </a>
+                </li>
+                <!--4-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active2 clearfix">
+                            <p class="content5_right_active-number fl">4</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R4.jpg"/>
+                            <p class="content5_right_active-word fl">《DO DISTURB》</p>
+                        </div>
+                        <div class="content5_right_no-active active1 clearfix">
+                            <p class="content5_right_number fl">4</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R4.jpg"/>
+                            <p class="content5_right_word fl">《DO DISTURB》</p>
+                        </div>
+                    </a>
+                </li>
+                <!--5-->
+                <li>
+                    <a href="#">
+                        <div class="content5_right_active active2 clearfix">
+                            <p class="content5_right_active-number fl">5</p>
+                            <img class="content5_right_active-img" src="../images/shop/content5_R5.jpg"/>
+                            <p class="content5_right_active-word fl">《DO DISTURB》</p>
+                        </div>
+                        <div class="content5_right_no-active active1 clearfix">
+                            <p class="content5_right_number fl">5</p>
+                            <img class="content5_right_img" src="../images/shop/content5_R5.jpg"/>
+                            <p class="content5_right_word fl">《DO DISTURB》</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--背景色-->
+<div class="content6789_bg">
+    <!--爆款周边------------------------------>
+    <div class="tittle tittle6">
+        <a href="#" class="tittle5_button2"></a>
+    </div>
+    <section class="content6">
+        <ul class="clearfix">
+            <!--1--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_1.jpg">
+                    <p></p>
+                    <p>WNANNA.ONE 封面1st</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥22</i>
+                        <span></span>
+                        <i>2</i>
+                    </div>
+                </a>
+            </li>
+            <!--2--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_2.jpg">
+                    <p>EXO</p>
+                    <p>EXO吴世勋封面 杂志Vogue Korea</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥75</i>
+                        <span></span>
+                        <i>10</i>
+                    </div>
+                </a>
+            </li>
+            <!--3--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_3.jpg">
+                    <p>EXO</p>
+                    <p>EXO吴世勋封面 杂志Vogue Korea</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥74</i>
+                        <span></span>
+                        <i>10</i>
+                    </div>
+                </a>
+            </li>
+            <!--4--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_4.jpg">
+                    <p>WANNA ONE</p>
+                    <p>WNANNA.ONE 杂志</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥78</i>
+                        <span></span>
+                        <i>0</i>
+                    </div>
+                </a>
+            </li>
+            <!--5--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_5.jpg">
+                    <p>Astro（韩国）</p>
+                    <p>ASTRO 官方应援手灯</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥265</i>
+                        <span></span>
+                        <i>1</i>
+                    </div>
+                </a>
+            </li>
+            <!--6--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_6.jpg">
+                    <p>CNBLUE</p>
+                    <p>CNBLUE 郑容和 封面</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥74</i>
+                        <span></span>
+                        <i>5</i>
+                    </div>
+                </a>
+            </li>
+            <!--7--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_7.jpg">
+                    <p>G-Dragon（BigBang）</p>
+                    <p>G-Dragon 权志龙封面</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥88</i>
+                        <span></span>
+                        <i>4</i>
+                    </div>
+                </a>
+            </li>
+            <!--8--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_8.jpg">
+                    <p>少女时代</p>
+                    <p>少女时代 10周年 官方饰品</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥158</i>
+                        <span></span>
+                        <i>4</i>
+                    </div>
+                </a>
+            </li>
+            <!--9--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_9.jpg">
+                    <p>少女时代</p>
+                    <p>少女时代 封面 W Korea杂志</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥66</i>
+                        <span></span>
+                        <i>1</i>
+                    </div>
+                </a>
+            </li>
+            <!--10--->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content6_1.jpg">
+                    <p>BLACKPINK</p>
+                    <p>BLACKPINK 官方周边</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥259</i>
+                        <span></span>
+                        <i>0</i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--明星同款------------------------------>
+    <div class="tittle tittle7">
+        <a href="#" class="tittle5_button2"></a>
+    </div>
+    <section class="content7">
+        <ul class="clearfix">
+            <li>
+                <a href="#">
+                    <p>鹿晗</p>
+                    <p>【鹿晗同款】SEXY MUSIC设计师王雅君设计 男女同款</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥149</i>
+                        <span></span>
+                        <i>110</i>
+                    </div>
+                    <img src="../images/shop/content7_1.jpg">
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <p>汪苏泷</p>
+                <p>【汪苏泷官方潮牌】SU2 迷彩太空棉黑色印花T恤</p>
+                <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                    <i>¥99.9</i>
+                    <span></span>
+                    <i>4</i>
+                </div>
+                <img src="../images/shop/content7_2.jpg">
+            </a>
+        </li>
+            <li>
+                <a href="#">
+                    <p>汪苏泷</p>
+                    <p>【汪苏泷原创潮牌】SU2 新款 复古花衬衫 男女同款</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥109</i>
+                        <span></span>
+                        <i>2</i>
+                    </div>
+                    <img src="../images/shop/content7_3.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>鹿晗</p>
+                    <p>【鹿晗同款】小吉他T恤SEXY MUSIC摇滚音符吉他T恤</p>
+                    <div class="content4_bottom"><!--引用“大家喜欢”里的价格和点赞处样式-->
+                        <i>¥259</i>
+                        <span></span>
+                        <i>6</i>
+                    </div>
+                    <img src="../images/shop/content7_4.jpg">
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--个护美妆------------------------------>
+    <div class="tittle tittle8">
+        <a href="#" class="tittle5_button2"></a>
+    </div>
+    <section class="content4 content8">
+        <ul>
+            <!--1----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_1.jpg"/>
+                    <p>美宝莲-具遮瑕气垫BB</p>
+                    <div class="content4_bottom">
+                        <i>¥69</i>
+                        <span></span>
+                        <i>27</i>
+                    </div>
+                </a>
+            </li>
+            <!--2----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_2.jpg"/>
+                    <p>【全款现货】EXO自然乐园护手套装</p>
+                    <div class="content4_bottom">
+                        <i>¥69</i>
+                        <span></span>
+                        <i>17</i>
+                    </div>
+                </a>
+            </li>
+            <!--3----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_3.jpg"/>
+                    <p>【全款预定-买一赠二】EXO-自然乐园香蕉蜡烛（分成员）</p>
+                    <div class="content4_bottom">
+                        <i>¥69</i>
+                        <span></span>
+                        <i>17</i>
+                    </div>
+                </a>
+            </li>
+            <!--4----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_4.jpg"/>
+                    <p>【全款预定-买一赠三】EXO代言-自然乐园 Nature Republic</p>
+                    <div class="content4_bottom">
+                        <i>¥116</i>
+                        <span></span>
+                        <i>13</i>
+                    </div>
+                </a>
+            </li>
+            <!--5----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_5.jpg"/>
+                    <p>MizineLeg 美人燃脂塑性修身美腿袜</p>
+                    <div class="content4_bottom">
+                        <i>¥50</i>
+                        <span></span>
+                        <i>9</i>
+                    </div>
+                </a>
+            </li>
+            <!--6----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_6.jpg"/>
+                    <p>【现货】EXO代言-自然乐园 Nature Republic成员封面吸油</p>
+                    <div class="content4_bottom">
+                        <i>¥56</i>
+                        <span></span>
+                        <i>19</i>
+                    </div>
+                </a>
+            </li>
+            <!--7----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_7.jpg"/>
+                    <p>Daisymee黛溪魅水蜜桃水润盈透凝露</p>
+                    <div class="content4_bottom">
+                        <i>¥39</i>
+                        <span></span>
+                        <i>4</i>
+                    </div>
+                </a>
+            </li>
+            <!--8----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_8.jpg"/>
+                    <p>鹿晗代言-叶子山梅花蜜桃晶彩亮肤面膜</p>
+                    <div class="content4_bottom">
+                        <i>¥49</i>
+                        <span></span>
+                        <i>24</i>
+                    </div>
+                </a>
+            </li>
+            <!--9----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_9.jpg"/>
+                    <p>【鹿晗代言-佳洁士】3D炫白双效牙膏白齿红唇3只装</p>
+                    <div class="content4_bottom">
+                        <i>¥34</i>
+                        <span></span>
+                        <i>10</i>
+                    </div>
+                </a>
+            </li>
+            <!--10----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content8_10.jpg"/>
+                    <p>【成员可选】EXO 自然乐园 2015圣诞限量 保湿唇膏</p>
+                    <div class="content4_bottom">
+                        <i>¥29</i>
+                        <span></span>
+                        <i>45</i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--影漫周边------------------------------>
+    <div class="tittle tittle9">
+        <a href="#" class="tittle5_button2"></a>
+    </div>
+    <section class="content4 content8">
+        <ul>
+            <!--1----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_1.jpg"/>
+                    <p>【现货包邮】New也喵手机指环支架 韩国可爱创意懒人指环</p>
+                    <div class="content4_bottom">
+                        <i>¥19.8</i>
+                        <span></span>
+                        <i>2</i>
+                    </div>
+                </a>
+            </li>
+            <!--2----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_2.jpg"/>
+                    <p>【全款现货】POKEMON宠物小精灵 布质徽章</p>
+                    <div class="content4_bottom">
+                        <i>¥28</i>
+                        <span></span>
+                        <i>5</i>
+                    </div>
+                </a>
+            </li>
+            <!--3----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_3.jpg"/>
+                    <p>时颖著《等世界给予，不如自己成长》</p>
+                    <div class="content4_bottom">
+                        <i>¥45</i>
+                        <span></span>
+                        <i>10</i>
+                    </div>
+                </a>
+            </li>
+            <!--4----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_4.jpg"/>
+                    <p>加一联创1more bear万能熊头戴式耳机支架工仔熊</p>
+                    <div class="content4_bottom">
+                        <i>¥149</i>
+                        <span></span>
+                        <i>1</i>
+                    </div>
+                </a>
+            </li>
+            <!--5----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_5.jpg"/>
+                    <p>加一联创1more E1009风尚版入耳式耳机</p>
+                    <div class="content4_bottom">
+                        <i>¥59</i>
+                        <span></span>
+                        <i>2</i>
+                    </div>
+                </a>
+            </li>
+            <!--6----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_6.jpg"/>
+                    <p>加一联创1more 中国好声音头戴式音乐耳机重低音</p>
+                    <div class="content4_bottom">
+                        <i>¥56</i>
+                        <span></span>
+                        <i>19</i>
+                    </div>
+                </a>
+            </li>
+            <!--7----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_7.jpg"/>
+                    <p>Stronger 轻音少女K-ON 5周年纪念中野</p>
+                    <div class="content4_bottom">
+                        <i>¥79</i>
+                        <span></span>
+                        <i>7</i>
+                    </div>
+                </a>
+            </li>
+            <!--8----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_8.jpg"/>
+                    <p>惊天魔盗团2立体吸管杯</p>
+                    <div class="content4_bottom">
+                        <i>¥9.9</i>
+                        <span></span>
+                        <i>5</i>
+                    </div>
+                </a>
+            </li>
+            <!--9----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_9.jpg"/>
+                    <p>【小怪家族】-BoBo君</p>
+                    <div class="content4_bottom">
+                        <i>¥48</i>
+                        <span></span>
+                        <i>2</i>
+                    </div>
+                </a>
+            </li>
+            <!--10----->
+            <li>
+                <a href="#">
+                    <img src="../images/shop/content9_10.jpg"/>
+                    <p>【小怪家族】——卖萌君</p>
+                    <div class="content4_bottom">
+                        <i>¥48</i>
+                        <span></span>
+                        <i>0</i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+<footer>
+    <img src="../images/shop/footer.png">
+</footer>
+<!-- 底部  -->
+<div class="footer_main black_bg">
+    <p class="footer_links">
+        <a href="article3.html">关于我们</a>
+        <span></span>
+        <a href="joinus.html">人才招聘</a>
+        <span></span>
+        <a href="article1.html">联系我们</a>
+        <span></span>
+        <a href="links.html">友情链接</a>
+        <span></span>
+        <a href="article4.html">版权声明</a>
+        <span></span>
+        <a href="service.html">客服中心</a>
+    </p>
+
+    <p class="footer_copy">
+        <a href="#"><img src="../images/culture.png" alt=""
+                         style="vertical-align: top;width:25px;height:25px;margin-right:3px;"></a>
+        Copyright © 2009 - 2017 yinyuetai.com 广播电视节目制作经营 许可证编号(京)字第1891号 |
+        <a href="#">京网文[2014]2037-287号</a>
+        <a href="#">网络视听许可证0110413号</a>
+        <br>
+        <a href="#"><img src="../images/ghs.png" alt="" style="vertical-align: top;"> 京公网安备11010502014900号 </a>
+        | 京ICP备11024134号-1 | 京ICP证060716号 | 出版物经营许可证
+        <a href="#">新出发京批字第直160022号</a>
+        | 增值电信业务经营许可证B2-20140501
+        <a href="#"><img src="../images/biaoshi.gif" alt="" style="vertical-align: top; margin-top: -25px;"></a>
+
+    </p>
+</div>
+</body>
+</html>

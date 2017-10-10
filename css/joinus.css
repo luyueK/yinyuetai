@@ -1,0 +1,165 @@
+/*加入我们主照片*/
+body{
+    background-color: #efefef;
+}
+.joinus-img{
+    height: 600px;
+    background: url("../images/joinus/joinus-img.jpg")
+    no-repeat center top;
+    overflow: hidden;
+    margin-top: 40px;
+}
+/*加入我们主照片*/
+
+/*加入我们2级导航开始*/
+.joinus-nav{
+    height: 70px;
+    background-color: #efefef;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.joinus-nav ul{
+    height: 82px;
+    line-height: 82px;
+    width: 980px;
+    margin: 0 auto;
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+    bottom: 10px;
+    padding: 0 210px 0 210px;
+}
+.joinus-nav-specialli a{
+    background:url("../images/joinus/joinus-sprite.png")
+    no-repeat -653px 0;
+    padding-left: 20px;
+    color: #690;
+    display: block;
+    height: 82px;
+}
+.joinus-nav-specialli a span{
+    padding-right: 25px;
+    padding-left: 4px;
+    background: url("../images/joinus/joinus-sprite.png")
+    no-repeat right -84px;
+    display: block;
+    height: 82px;
+    font-size: 15px;
+    font-family: "microsoft yahei";
+}
+.joinus-nav ul li i{
+    background: url("../images/joinus/joinus-sprite.png")
+    no-repeat -29px 0;
+    display: inline-block;
+    width: 4px;
+    height: 25px;
+    overflow: hidden;
+    margin-top: 32px;
+    float: right;
+}
+.joinus-nav ul li a{
+    text-align: center;
+    font-size: 15px;
+    padding: 0 17px 0 17px;
+    font-family: "microsoft yahei";
+}
+.joinus-nav ul li a:hover{
+    color: #390;
+}
+/*加入我们2级导航结束*/
+
+/*加入我们主体开始*/
+.joinus-main{
+    width: 758px;
+    margin: 0 auto;
+    padding-left: 60px;
+    background: url("../images/joinus/joinus-main.png")
+    no-repeat center 36px;
+}
+.joinus-main h2{
+    font-weight: normal;
+    font-size: 22px;
+    color: #690;
+    font-family: "microsoft yahei";
+    padding: 46px 0 10px 0;
+}
+.joinus-main span{
+    font-size: 14px;
+    font-weight: 500;
+}
+/*加入我们主体段落开始*/
+.joinus-main-pblock{
+    padding-top: 50px;
+}
+.joinus-main-pblock p{
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+    text-indent: 2em;
+    line-height: 28px;
+}
+/*加入我们主体段落结束*/
+
+/*加入我们主体要求开始*/
+.joinus-request{
+    height: 34px;
+    line-height: 34px;
+    padding-left: 20px;
+    margin: 10px 0 20px 0;
+    font-weight: 700;
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0 #e9e9e9;
+    position: relative;
+}
+.joinus-request p{
+    color: #690;
+    text-indent: 0;
+}
+.joinus-request span{
+    display: block;
+    width: 0;
+    height: 0;
+    border: 7px solid;
+    border-color: #fff #fff #fff #fff;
+    position: absolute;
+    left: 47px;
+    bottom: -8px;
+    transform: rotate(45deg);
+}
+/*加入我们主体要求结束*/
+
+/*加入我们主体要求内容开始*/
+.joinus-request-content{
+    font-size: 14px;
+    color: #666;
+}
+/*加入我们主体要求内容结束*/
+
+/*加入我们底部照片开始*/
+.joinus-bottom-img{
+    height: 350px;
+}
+.joinus-bottom-img p:first-child{
+    width: 603px;
+    height: 78px;
+    background: url("../images/joinus/joinus-sprite.png")
+    no-repeat -42px 0;
+    margin: 80px 0;
+}
+.joinus-bottom-img p:last-child{
+    width: 388px;
+    height: 118px;
+    background: url("../images/joinus/joinus-sprite.png")
+    no-repeat -258px -82px;
+    margin-bottom: 30px;
+}
+.joinus-bottom-img p:last-child a{
+    display: block;
+    width: 280px;
+    height: 100px;
+    margin-top: 36px;
+    margin-left: 104px;
+}
+/*加入我们底部照片结束*/
+/*加入我们主体结束*/

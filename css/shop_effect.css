@@ -1,0 +1,83 @@
+/****�ͷ���ť*************************/
+.service li:nth-of-type(1) a:hover{
+     width: 60px;
+     height: 60px;
+     background: url("../images/icon/service.png") -75px -3px ;
+ }
+.service li:nth-of-type(2) a:hover{
+    width: 60px;
+    height: 60px;
+    background: url("../images/icon/service.png") -75px -64px ;
+}
+.service li:nth-of-type(3) a:hover{
+    width: 60px;
+    height: 60px;
+    background: url("../images/icon/service.png") -75px -125px ;
+}
+/**����������**************************************/
+.header_content_button ul li:nth-of-type(3):hover,
+.header_content_button ul li:nth-of-type(2):hover{
+    background-color: white;
+}
+.header_content_button ul li:nth-of-type(3):hover .header_content_button_scan,
+.header_content_button ul li:nth-of-type(2):hover .header_content_button_scan{
+    display: block;
+}
+.menu_content .menu_button1:hover .menu_button1_hidden{
+    display: block;
+}
+.menu_button1_hidden ul:nth-of-type(3) li a:hover{
+    background: url("../images/shop/more.png") 0 -48px;
+}
+/**ע�ᡢ���ҵĶ��������ﳵ��ť*/
+/**�˵���******************************/
+.search_register ul li a:hover,
+.menu_button1>a:hover,
+.menu_button ul li a:hover{
+    color: #f32b6d;
+}
+.menu_button ul li:hover{
+    border-bottom: 2px solid #f02b6c;
+}
+.content2_tittle_button1:hover,.content2_tittle_button2:hover{
+    background: url("../images/shop/content2_tittle_button1.png");
+    color: white;
+}
+.content3_box_right span:hover,/*����Ч��**/
+.content4_bottom span:hover{
+    background: url("../images/icon/ico.png") -13px -73px;
+    cursor: pointer;
+}
+.content3 ul li:hover,
+.content4 ul li:hover ,
+.content5_middle ul li:hover,
+.content6 ul li:hover,
+.content7 ul li:hover{/*ģ����Ӱ*/
+    box-shadow: 5px 5px 5px #cccccc;
+}
+.tittle5_button1:hover,.tittle5_button2:hover{
+    background: url("../images/icon/ico.png")0 -51px;
+}
+
+.content5_right_choose a.active{
+    background-color: #f9c9d9;
+}
+/***AD*************************************************/
+.banner:hover .banner_arrow-left{
+    display: block;
+}
+.banner:hover .banner_arrow-right{
+    display: block;
+}
+.banner_arrow-left:hover{
+    background: url("../images/icon/banner_arrow.png") 0 -72px;
+    cursor: pointer;
+}
+.banner_arrow-right:hover{
+    background: url("../images/icon/banner_arrow.png") 0 -216px;
+    cursor: pointer;
+}
+.banner_point ul li.active{
+    color: #333;
+    opacity: 1;
+}

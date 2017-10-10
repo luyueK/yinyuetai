@@ -1,0 +1,88 @@
+/*版权头部开始*/
+.about-header{
+    padding-top: 35px;
+    width: 960px;
+    margin: 0 auto;
+}
+.about-header h1{
+    padding: 40px 10px 20px;
+    font-size: 16px;
+    font-family:"Microsoft YaHei",tahama;
+}
+/*版权头部结束*/
+
+/*版权主体开始*/
+.about-main{
+    width: 960px;
+    height: 820px;
+    margin: 0 auto;
+}
+/*版权主体左侧开始*/
+.about-main-left{
+    width: 615px;
+}
+
+.about-main-left h3{
+    padding: 20px 15px 7px 15px;
+    border-bottom: 1px solid#d4e4c2;
+    color: #333;
+    font-weight: bolder;
+    font-size: 12px;
+    font-family:"宋体";
+}
+.about-main-left h3 strong{
+    font-size: 14px;
+}
+.article{
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+.article p{
+    font-family:"宋体";
+    line-height: 20px;
+    text-indent: 2em;
+    padding-left: 8px;
+    padding-bottom: 14px;
+    color: #333333;
+    font-size: 14px;
+}
+.article span{
+    font-family:"宋体";
+    display: block;
+    text-indent: 70px;
+    color: #333333;
+    line-height: 22px;
+    font-size: 14px;
+}
+.article strong{
+    font-weight: 700;
+    text-decoration: underline;
+}
+.article em{
+    font-weight: 600;
+    font-style: normal;
+}
+/*版权主体左侧结束*/
+
+
+/*版权主体右侧开始*/
+.about-main-right {
+    width: 310px;
+    height: 169px;
+    padding-left: 34px;
+    padding-top: 45px;
+}
+.about-main-right li a{
+    height: 20px;
+    line-height: 20px;
+    color: #008fc8;
+}
+.about-main-right li a:hover{
+    color: #390;
+    text-decoration: underline;
+}
+/*版权主体右侧结束*/
+
+/*版权主体结束*/
+

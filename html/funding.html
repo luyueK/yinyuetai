@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐众筹（姜占达）</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/top_nav.css">
+    <link rel="stylesheet" type="text/css" href="../css/funding.css">
+    <script src="../js/jquery-1.7.2.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        $(function(){
+
+            (function(){
+                var timer = null;
+                function autoPlay(){
+
+                    var i = 0;
+                    clearInterval(timer);
+                    timer = setInterval(function (){
+                        
+                        if ( i == 2 ) i = 0;
+                        i++;
+                        if ( i == 2 ) i = 0;
+                        $('.funding-right-news .news-ball span').removeClass('active');
+                        $('.funding-right-news .news-ball span').eq(i).addClass('active');
+                        $(".funding-right-news .funding-right-news-ul").stop().animate({
+                            'marginLeft': -i*312+'px'
+                        },1000);
+
+                    },2000);
+                }
+
+                autoPlay();
+
+                $('.funding-right-news .news-ball span').click(function (){
+                    clearInterval(timer);
+                    $('.funding-right-news .news-ball span').removeClass('active');
+                    $(this).addClass('active');
+                    
+                    $(".funding-right-news .funding-right-news-ul").stop().animate({
+                            'marginLeft': -$(this).index()*312+'px'
+                        },1000);
+                });
+                $('.funding-right-news .funding-right-news-ul').mouseout(function (){
+                    autoPlay();
+                });
+            })(); 
+
+            (function (){
+                $('.funding-right-list h3 a').click(function (){
+                    $('.funding-right-list h3 a').removeClass('active');
+                    $(this).addClass('active');
+                    
+                    $(".funding-right-list .funding-right-list-ul").stop().animate({
+                            'marginLeft': -$(this).index()*311+'px'
+                    },1000);
+                });
+            })();
+        });
+
+    </script>
+</head>
+<body>
+<div class="back_top"><a href="javascript:;"><img src="../images/returntop.png" alt=""></a></div>
+<!-- 头部  -->
+<nav class="top_main clearfix">
+    <div class="top_left fl">
+        <div class="logo fl">
+            <a href="../index.html"><h1>音悦Tai - 让娱乐更美好</h1></a>
+        </div>
+        <ul class="top_nav fl">
+            <li class=" fl"><a href="../index.html">首页</a></li>
+            <li class="mv_box fl">
+                <a class="clearfix" href="mv.html"><span class="fl">MV</span><i class="fl"></i></a>
+                <ul class="mv_list">
+                    <li><a href="#">韩流频道</a></li>
+                    <li><a href="#">华语频道</a></li>
+                    <li><a href="#">欧美频道</a></li>
+                    <li><a href="#">日语频道</a></li>
+                    <li><a href="#">粉丝聚焦</a></li>
+                </ul>
+            </li>
+            <!----------------------------------------------------------------->
+            <li class="fl"><a href="vchart.html">V榜</a></li>
+            <li class="fl"><a href="news.html">娱乐</a></li>
+            <li class="fl"><a href="shop.html">商城</a></li>
+            <li class="fl"><a href="funding.html">众筹</a></li>
+            <li class="fl"><a href="folkCulture.html">民俗文化</a></li>
+            <!----------------------------------------------------------------->
+        </ul>
+    </div>
+    <div class="top_right fr">
+        <ul class="func clearfix">
+            <li class="search_bar fl">
+                <div></div>
+                <div></div>
+                <form action="http://so.yinyuetai.com">
+                    <div class="search_box"><input type="text" placeholder="金刚狼十七年催泪混剪"><i></i></div>
+                </form>
+                <div class="search_bar_down">
+                    <ul>
+                        <li><a href="#">夏日女团清凉回归</a> </li>
+                        <li><a href="#">exo歌曲demo大合集</a> </li>
+                        <li><a href="#">林肯公园主唱自杀身亡</a> </li>
+                        <li><a href="#">天了噜！薛之谦田馥甄</a> </li>
+                        <li><a href="#">暑期档电视剧OST友情大放送</a> </li>
+                        <li><a href="#">2017下半年要回归的KPOP团！</a> </li>
+                        <li><a href="#">楚乔宇文玥昨天接吻</a> </li>
+                        <li><a href="#">金泰妍最佳舞台演唱合集！超棒</a> </li>
+                        <li><a href="#">吴青峰未发表作品《只有可以》</a> </li>
+                        <li><a href="#">男生跳女版舞步究！？</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="top_vip fl"><a href="#"></a></li>
+            <li class="top_up fl"><a href="#"></a></li>
+            <li class="top_share fl">
+                <a class="clearfix" href="#"><span class="fl"></span><i class="fl"></i></a>
+                <ul class="share_list">
+                    <li><a href="#">移动客户端</a></li>
+                    <li><a href="#">PC客户端</a></li>
+                    <li><a href="#">Star明星直播</a></li>
+                </ul>
+            </li>
+            <li class="login_bar fl">
+                <a class="login" href="#">登录</a>
+                <a class="reg" href="#">注册</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<header id="crowd-header"><!--众筹头部开始 crowd funding header start-->
+        <div class="crowd-header-width"><!--此项定宽开始 fixed width start-->
+            <section class="crowd-header-left fl clearfix"><!--众筹头部左部开始crowd funding header left start-->
+            <ul>
+                <li class="fl"><a href="">音乐众筹</a></li>
+                <li class="fl"><a href="">发现项目</a></li>
+                <li class="fl"><a href="">资讯</a></li>
+                <li class="fl"><a href="">发起众筹</a></li>
+            </ul>
+        </section>
+            <!--众筹头部左部结束crowd funding header  left over-->
+
+            <section class="crowd-header-seach fl"><!--众筹头部搜索框开始crowd funding header  seach start-->
+                <section class="seach-border clearfix">
+                    <label>
+                        <input class="fl" type="text">
+                    </label>
+                    <a class="fl" href="#">
+                        <img src="../images/zhongchou/seach.png" alt="">
+                    </a>
+                </section>
+        </section>
+            <!--众筹头部搜索框结束crowd funding header  seach over-->
+
+            <ul class="crowd-header-right fr"><!--众筹头部右侧开始crowd funding header  right start-->
+            <li class="fl">
+                <i class="header-right-img1 fl"></i>
+                <a class="fl" href="#">任务</a>
+                <b></b>
+            </li>
+            <li class="fl">
+                <i class="header-right-img2 fl"></i>
+                <a class="fl" href="#">个人中心</a>
+            </li>
+        </ul>
+            <!--众筹头部右侧结束crowd funding header  right over-->
+        </div><!--此项定宽结束 fixed width over-->
+    </header>
+    <!--众筹主体头部结束crowd funding header over-->
+    <div id="crowd-main"><!--众筹主体开始crowd funding main start-->
+        <section class="crowd-main-top clearfix">
+            <ul>
+                <li class="fl">
+                    <img src="../images/zhongchou/crowd-main-top.jpg" alt="">
+                </li>
+                <li class="fl">
+                    <img src="../images/zhongchou/crowd-main-top.jpg" alt="">
+                </li>
+                <li class="fl">
+                    <img src="../images/zhongchou/crowd-main-top.jpg" alt="">
+                </li>
+                <li class="fl">
+                    <img src="../images/zhongchou/crowd-main-top.jpg" alt="">
+                </li>
+                <li class="fl">
+                    <img src="../images/zhongchou/crowd-main-top.jpg" alt="">
+                </li>
+                <li class="fl">
+                    <img src="../images/zhongchou/crowd-main-top.jpg" alt="">
+                </li>
+            </ul>
+            <a class="crowd-main-top-left" href="#"></a>
+            <a class="crowd-main-top-right" href="#"></a>
+                
+            <div class="ball">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        <section id="funding"><!--音乐众筹主体开始-->
+            <section class="funding-left fl"><!--音乐众筹左侧开始-->
+                <header class="">
+                    <h3 class="fl"></h3>
+                    <ul class="fl funding-left-nav">
+                        <li class="fl"><a href="#">推荐</a></li>
+                        <li class="fl"><a href="#">应援</a></li>
+                        <li class="fl"><a href="#">集占！</a></li>
+                        <li class="fl"><a href="#">团购</a></li>
+                        <li class="fl"><a href="#">活动</a></li>
+                    </ul>
+                    <span class="fr"></span>
+                </header>
+                <ul class="funding-left-img clearfix">
+                    <li class="fl">
+                        <span class="fr funding-left-img-span"><i>剩余84天</i></span>
+                        <h4 class="fl"><a href="#">TIGERFEEDER721</a></h4>
+                        <a href="#"><img class="funding-left-img1" src="../images/zhongchou/funding-left-img1.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">【NUEST回归】不运回专辑存钱罐</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥3.6万</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <span class="fr funding-left-img-span"><i>剩余14天</i></span>
+                        <h4 class="fl"><a href="#">JJProject应援博</a></h4>
+                        <a href="#"><img src="../images/zhongchou/funding-left-img2.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">2017JJ Project回归第二批音源集资</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥1.9万</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl funding-left-img-border">
+                        <span class="fr funding-left-img-span"><i>剩余68天</i></span>
+                        <h4 class="fl"><a href="#">蓝颜_河北妖精后援会</a></h4>
+                        <a href="#"><img src="../images/zhongchou/funding-left-img3.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">SuperJunior八辑回归联合应援公告</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥285.00</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <span class="fr funding-left-img-span"><i>剩余74天</i></span>
+                        <h4 class="fl"><a href="#">蓝之域BlueDomain_SuJu团站</a></h4>
+                        <a href="#"><img src="../images/zhongchou/funding-left-img4.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">Super Junior 八辑回归联合应援</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥3,525.00</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <span class="fr funding-left-img-span"><i>已成功</i></span>
+                        <h4 class="fl"><a href="#">JJProject应援博</a></h4>
+                        <a href="#"><img src="../images/zhongchou/funding-left-img2.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">【JJ Project】2017JJ Project回归音源集资</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥10.92万</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl funding-left-img-border">
+                        <span class="fr funding-left-img-span"><i>剩余23天</i></span>
+                        <h4 class="fl"><a href="#">易安中文网</a></h4>
+                        <a href="#"><img src="../images/zhongchou/funding-left-img5.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">展逸文0816生日公益应援</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥20.00</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <span class="fr funding-left-img-span"><i>已成功</i></span>
+                        <h4 class="fl"><a href="#">飞儿乐团全球歌迷网</a></h4>
+                        <a href="#"><img src="../images/zhongchou/funding-left-img6.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">为流动儿童圆梦-Faye特别行动</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥1，208.13</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <span class="fr funding-left-img-span"><i>已成功</i></span>
+                        <h4 class="fl"><a href="#">瀚文OTO吧</a></h4>
+                        <a href="#"><img src="../images/zhongchou/funding-left-img7.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">音画梦想-瀚文特别行动</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥2，489.24</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl funding-left-img-border">
+                        <span class="fr funding-left-img-span"><i>已成功</i></span>
+                        <h4 class="fl"><a href="#">百度朴素妍吧</a></h4>
+                        <a href="#"><img src="../images/zhongchou/funding-left-img8.jpg" alt=""></a>
+                        <div class="list-title">
+                            <a href="#">音乐台粉丝节活动众筹</a>
+                        </div>
+                        <div class="funding-over">
+                            <section>
+                                <b>已达成：<i>￥2，075.00</i></b>
+                            </section>
+                            <p class="funding-over-p">
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                                <span class="fl"></span>
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </section><!--音乐众筹左侧结束-->
+            <section class="funding-right fr"><!--音乐众筹右侧开始-->
+                <h3 class="funding-right-h3">
+                    <a href="#"></a>
+                </h3>
+                <article class="funding-right-news"><!--音乐众筹右侧文章开始-->
+                    <h4>资讯</h4>
+                    <p>
+                        <a href="#">
+                            <span>超火《Produce 101》第三季明年来袭？！</span>
+                            <img src="../images/zhongchou/funding-right-news.jpg" alt="">
+                        </a>
+                    </p>
+                    <div class="funding-right-news-ul clearfix">
+                        <ul class="fl">
+                            <li class="fl">
+                                <a href="#">生了？昆凌被爆今早剖腹生子！</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">35岁唐宁被曝已离婚 曾演《大唐双龙传》</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">白百何出轨门后携子现身！亲昵尽显母爱</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">王源送的?甜馨收到男神送礼物 爱不释手一脸开心</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">心疼！杨洋穿高领长袖竟是为遮身上的伤</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">王俊凯考场遭堵截 公司怒挂照片谴责</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">亮瞎眼！古装剧里得罪造型师的女星们</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">韩星高雅拉与SM合约到期 今后去向引关注</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">蒋劲夫谈“吻”黄子韬：嘴唇好软，我好幸福！</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">韩外交部：已向中方传达对“限韩令”忧虑</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">17岁少女偶像宣布毕业 似受恋爱绯闻影响</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">为什么娶丁文琪？林宥嘉甜称：她适合做老婆</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">网曝王源王祖蓝"王牌2"当队长 谢娜白百何退出</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">张艺兴《天天》再现性感地板舞 自曝为专辑失眠</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">甜馨易烊千玺昔日合影曝光 大眼尖下巴星味儿足</a>
+                            </li>
+                        </ul>
+                        <ul class="fl">
+                            <li class="fl">
+                                <a href="#">生了？昆凌被爆今早剖腹生子！</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">35岁唐宁被曝已离婚 曾演《大唐双龙传》</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">白百何出轨门后携子现身！亲昵尽显母爱</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">王源送的?甜馨收到男神送礼物 爱不释手一脸开心</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">心疼！杨洋穿高领长袖竟是为遮身上的伤</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">王俊凯考场遭堵截 公司怒挂照片谴责</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">亮瞎眼！古装剧里得罪造型师的女星们</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">韩星高雅拉与SM合约到期 今后去向引关注</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">蒋劲夫谈“吻”黄子韬：嘴唇好软，我好幸福！</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">韩外交部：已向中方传达对“限韩令”忧虑</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">17岁少女偶像宣布毕业 似受恋爱绯闻影响</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">为什么娶丁文琪？林宥嘉甜称：她适合做老婆</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">网曝王源王祖蓝"王牌2"当队长 谢娜白百何退出</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">张艺兴《天天》再现性感地板舞 自曝为专辑失眠</a>
+                            </li>
+                            <li class="fl">
+                                <a href="#">甜馨易烊千玺昔日合影曝光 大眼尖下巴星味儿足</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="news-ball">
+                        <span class="fl"></span>
+                        <span class="fl active"></span>
+                    </div>
+                </article>
+                <!--音乐众筹右侧文章结束-->
+
+
+                <!--音乐众筹右侧榜单开始-->
+                <section class="funding-right-list">
+                    <header>
+                        <h4 class="fl">榜单</h4>
+                        <span class="fl"><a href="#">?</a></span>
+                    </header>
+                    <h3>
+                        <p>
+                        <a class="active" href="javascript:;">粉丝团实力榜</a>
+                        <a href="javascript:;">粉丝贡献榜</a>
+                        </p>
+                    </h3>
+                    <div class="funding-right-list-ul clearfix">
+                        <ul class="fl">
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list1.jpeg" alt="">
+                                    <p class="fl">渡边麻友吧</p>
+                                    <em class="fr">￥43万</em>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list2.jpg" alt="">
+                                    <p class="fl">伍嘉成全球后援会</p>
+                                    <em class="fr">￥18万</em>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list3.jpg" alt="">
+                                    <p class="fl">JJProject</p>
+                                    <em class="fr">￥13万</em>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list4.jpg" alt="">
+                                    <p class="fl">金秀贤LadyKmoom后援会</p>
+                                    <em class="fr">￥12万</em>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list5.jpg" alt="">
+                                    <p class="fl">郭子凡全球后援会</p>
+                                    <em class="fr">￥11万</em>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="fl">
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list1.jpeg" alt="">
+                                    <p class="fl">渡边麻友吧</p>
+                                    <em class="fr">￥43万</em>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list2.jpg" alt="">
+                                    <p class="fl">伍嘉成全球后援会</p>
+                                    <em class="fr">￥18万</em>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list3.jpg" alt="">
+                                    <p class="fl">JJProject</p>
+                                    <em class="fr">￥13万</em>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list4.jpg" alt="">
+                                    <p class="fl">金秀贤LadyKmoom后援会</p>
+                                    <em class="fr">￥12万</em>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fl"></i>
+                                <a class="fl clearfix" href="#">
+                                    <img class="fl" src="../images/zhongchou/funding-right-list5.jpg" alt="">
+                                    <p class="fl">郭子凡全球后援会</p>
+                                    <em class="fr">￥11万</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+                <!--音乐众筹右侧榜单结束-->
+            </section>
+            <!--音乐众筹右侧结束-->
+        </section>
+        <!--音乐众筹主体结束-->
+
+        <section class="true-love"><!--音乐众筹告白结束-->
+            <h3>
+                <span></span>
+            </h3>
+            <ul>
+                <li class="fl">
+                    <section class="true-love-litop">
+                        <a href="#">
+                            <img src="../images/zhongchou/true-love-litop1.jpg" alt="">
+                            <div class="true-love-litop-icon clearfix">
+                                <i>69911</i>
+                                <em class="fr">13</em>
+                            </div>
+                            <span></span>
+                        </a>
+                    </section>
+                    <a class="true-love-li-a" href="#">V榜特别企划EP192 推陈出新的风向标 - 音悦V榜特别企划 & 方大同 & 五月天 & 草东没有派对</a>
+                    <section class="true-love-libottom clearfix">
+                        <img  class="fl" src="../images/zhongchou/true-love-libottom1.jpeg" alt="">
+                        <span class="fl">音乐V榜</span>
+                    </section>
+                </li>
+                <li class="fl">
+                    <section class="true-love-litop">
+                        <a href="#">
+                            <img src="../images/zhongchou/true-love-litop2.jpg" alt="">
+                            <div class="true-love-litop-icon clearfix">
+                                <i>108723</i>
+                                <em class="fr">145</em>
+                            </div>
+                            <span></span>
+                        </a>
+                    </section>
+                    <a class="true-love-li-a" href="#">来自新世界的清新少年-SWIN专访 - STAR!调查团 & SWIN组合</a>
+                    <section class="true-love-libottom clearfix">
+                        <img  class="fl" src="../images/zhongchou/true-love-libottom2.jpg" alt="">
+                        <span class="fl">音悦节目</span>
+                    </section>
+                </li>
+
+                <li class="fl">
+                    <section class="true-love-litop">
+                        <a href="#">
+                            <img src="../images/zhongchou/true-love-litop3.jpg" alt="">
+                            <div class="true-love-litop-icon clearfix">
+                                <i>307494</i>
+                                <em class="fr">206</em>
+                            </div>
+                            <span></span>
+                        </a>
+                    </section>
+                    <a class="true-love-li-a" href="#">E191 PRODUCE101 记一次真情实感的追星 - 音悦V榜特别企划 & 朴志训(WANNA ONE) & 赖冠霖(WANNA ONE) & 姜丹尼尔(WANNA ONE) & 李大辉(WANNA ONE) & WANNA·ONE</a>
+                    <section class="true-love-libottom clearfix">
+                        <img  class="fl" src="../images/zhongchou/true-love-libottom1.jpeg" alt="">
+                        <span class="fl">音乐V榜</span>
+                    </section>
+                </li>
+                <li class="fl true-love-li-border">
+                    <section class="true-love-litop">
+                        <a href="#">
+                            <img src="../images/zhongchou/true-love-litop4.jpg" alt="">
+                            <div class="true-love-litop-icon clearfix">
+                                <i>69911</i>
+                                <em class="fr">13</em>
+                            </div>
+                            <span></span>
+                        </a>
+                    </section>
+                    <a class="true-love-li-a" href="#">What’s My Name 完整版 - T-ara</a>
+                    <section class="true-love-libottom clearfix">
+                        <img  class="fl" src="../images/zhongchou/true-love-libottom4.png" alt="">
+                        <span class="fl">百度Tiara组合吧</span>
+                    </section>
+                </li>
+                <li class="fl">
+                    <section class="true-love-litop">
+                        <a href="#">
+                            <img src="../images/zhongchou/true-love-litop5.jpg" alt="">
+                            <div class="true-love-litop-icon clearfix">
+                                <i>12432</i>
+                                <em class="fr">28112</em>
+                            </div>
+                            <span></span>
+                        </a>
+                    </section>
+                    <a class="true-love-li-a" href="#">< MAN x MAN >预告2 - 朴海镇</a>
+                    <section class="true-love-libottom clearfix">
+                        <img  class="fl" src="../images/zhongchou/true-love-libottom5.jpg" alt="">
+                        <span class="fl">高胖帅</span>
+                    </section>
+                </li>
+                <li class="fl">
+                    <section class="true-love-litop">
+                        <a href="#">
+                            <img src="../images/zhongchou/true-love-litop6.jpg" alt="">
+                            <div class="true-love-litop-icon clearfix">
+                                <i>1856</i>
+                                <em class="fr">0</em>
+                            </div>
+                            <span></span>
+                        </a>
+                    </section>
+                    <a class="true-love-li-a" href="#">All Mine 完整版 - f(x)</a>
+                    <section class="true-love-libottom clearfix">
+                        <img  class="fl" src="../images/zhongchou/true-love-libottom6.jpeg" alt="">
+                        <span class="fl">SMEntertainment</span>
+                    </section>
+                </li>
+                <li class="fl">
+                    <section class="true-love-litop">
+                        <a href="#">
+                            <img src="../images/zhongchou/true-love-litop7.jpg" alt="">
+                            <div class="true-love-litop-icon clearfix">
+                                <i>42066</i>
+                                <em class="fr">1094</em>
+                            </div>
+                            <span></span>
+                        </a>
+                    </section>
+                    <a class="true-love-li-a" href="#">UNIQ LIFE S2 EP5汶翰的收拾行李 TIP! 中文字幕 16/12/02(UNIQ字幕组) - UNIQ & 李汶翰(UNIQ)</a>
+                    <section class="true-love-libottom clearfix">
+                        <img  class="fl" src="../images/zhongchou/true-love-libottom7.jpg" alt="">
+                        <span class="fl">UNIQ字幕组</span>
+                    </section>
+                </li>
+                <li class="fl true-love-li-border">
+                    <section class="true-love-litop">
+                        <a href="#">
+                            <img src="../images/zhongchou/true-love-litop8.jpg" alt="">
+                            <div class="true-love-litop-icon clearfix">
+                                <i>14724</i>
+                                <em class="fr">2345</em>
+                            </div>
+                            <span></span>
+                        </a>
+                    </section>
+                    <a class="true-love-li-a" href="#">渡边麻友2017总选政见 中文字幕 - AKB48 & 渡边麻友</a>
+                    <section class="true-love-libottom clearfix">
+                        <img  class="fl" src="../images/zhongchou/true-love-libottom8.jpg" alt="">
+                        <span class="fl">camara2008</span>
+                    </section>
+                </li>
+            </ul>
+        </section><!--音乐众筹告白结束-->
+        
+        <!--最新入驻开始-->
+        <section class="new-entry">
+            <h4>
+                <span></span>
+            </h4>
+            <ul>
+                <li class="fl">
+                    <a href="#"><img src="../images/zhongchou/new-entry1.jpg" alt=""></a>
+                    <a href="">王俊凯官后内蒙古分会</a>
+                    <span><a href="#"></a></span>
+                </li>
+                <li class="fl">
+                    <a href="#"><img src="../images/zhongchou/new-entry2.jpg" alt=""></a>
+                    <a href="">易安中文网</a>
+                    <span></span>
+                </li>
+                <li class="fl">
+                    <a href="#"><img src="../images/zhongchou/new-entry3.jpg" alt=""></a>
+                    <a href="">INBloomCLC中文站</a>
+                    <span></span>
+                </li>
+                <li class="fl">
+                    <a href="#"><img src="../images/zhongchou/new-entry4.png" alt=""></a>
+                    <a href="">逐梦协会</a>
+                    <span></span>
+                </li>
+                <li class="fl new-entry-ul-li-border">
+                    <a href="#"><img src="../images/zhongchou/new-entry5.jpg" alt=""></a>
+                    <a href="">伍嘉成全球后援会</a>
+                    <span></span>
+                </li>
+                <li class="fl">
+                    <a href="#"><img src="../images/zhongchou/new-entry6.jpg" alt=""></a>
+                    <a href="">PinkyWook-池昌旭个站</a>
+                    <span></span>
+                </li>
+                <li class="fl">
+                    <a href="#"><img src="../images/zhongchou/new-entry7.jpg" alt=""></a>
+                    <a href="">王俊凯官后河南分会</a>
+                    <span></span>
+                </li>
+                <li class="fl">
+                    <a href="#"><img src="../images/zhongchou/new-entry8.jpeg" alt=""></a>
+                    <a href="">UPPERMOST文钟业阿噗站</a>
+                    <span></span>
+                </li>
+                <li class="fl">
+                    <a href="#"><img src="../images/zhongchou/new-entry9.gif" alt=""></a>
+                    <a href="">卢桌吧官博</a>
+                    <span></span>
+                </li>
+                <li class="fl new-entry-ul-li-border">
+                    <a href="#"><img src="../images/zhongchou/new-entry10.jpg" alt=""></a>
+                    <a href="">KH-Reformasi</a>
+                    <span></span>
+                </li>
+            </ul>
+        </section>
+        <!--最新入驻结束-->
+
+    </div><!--众筹主体结束crowd funding main over-->
+
+
+
+<!-- 底部  -->
+<div class="footer_main black_bg">
+    <p class="footer_links">
+        <a href="article3.html">关于我们</a>
+        <span></span>
+        <a href="joinus.html">人才招聘</a>
+        <span></span>
+        <a href="article1.html">联系我们</a>
+        <span></span>
+        <a href="links.html">友情链接</a>
+        <span></span>
+        <a href="article4.html">版权声明</a>
+        <span></span>
+        <a href="service.html">客服中心</a>
+    </p>
+
+    <p class="footer_copy">
+        <a href="#"><img src="../images/culture.png" alt=""
+                         style="vertical-align: top;width:25px;height:25px;margin-right:3px;"></a>
+        Copyright © 2009 - 2017 yinyuetai.com 广播电视节目制作经营 许可证编号(京)字第1891号 |
+        <a href="#">京网文[2014]2037-287号</a>
+        <a href="#">网络视听许可证0110413号</a>
+        <br>
+        <a href="#"><img src="../images/ghs.png" alt="" style="vertical-align: top;"> 京公网安备11010502014900号 </a>
+        | 京ICP备11024134号-1 | 京ICP证060716号 | 出版物经营许可证
+        <a href="#">新出发京批字第直160022号</a>
+        | 增值电信业务经营许可证B2-20140501
+        <a href="#"><img src="../images/biaoshi.gif" alt="" style="vertical-align: top; margin-top: -25px;"></a>
+
+    </p>
+</div>
+
+
+</body>
+</html>

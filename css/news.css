@@ -1,0 +1,1081 @@
+/*顶部*/
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+}
+.head {
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.head-center {
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+}
+/*左侧 logo图*/
+.center-left img {
+    display: block;
+    padding-top: 20px;
+    float: left;
+}
+/*右侧 导航列表*/
+.center-right {
+    width: 360px;
+    height: 90px;
+    float: right;
+}
+.center-right ul li {
+    float: left;
+    margin-left: 40px;
+}
+.center-right ul li a {
+    display: block;
+    line-height: 90px;
+    font-size: 18px;
+}
+.center-right ul li a:hover{
+    color: orangered;
+}
+.right-a {
+    color: #ff7c7c;
+}
+.container {
+    width: 1200px;
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.content-1 {
+    width: 1200px;
+    height: 430px;
+}
+/*banner图*/
+.banner {
+    width: 840px;
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+.banner img{
+    display: block;
+    width: 840px;
+    height: 430px;
+}
+/*banner图中隐藏的图片*/
+.banner ul{
+    width:500%;
+    margin-left: 0;
+}
+.banner ul li{
+    float: left;
+}
+/*banner图 右下角的五个小方块*/
+.square{
+    width:200px;
+    height:20px;
+    position: absolute;
+    bottom:30px;
+    right:-30px;
+}
+.square a{
+    display: inline-block;
+    width: 18px;
+    height: 9px;
+    margin: 0 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #908f8b;
+}
+.square a:hover{
+    background: white;
+}
+.square a.active{
+    background: white;
+}
+/*banner图中 左箭头*/
+.banner .banner-span1{
+    width:44px;
+    height:101px;
+    position: absolute;
+    top:150px;
+    left:-2px;
+    cursor: pointer;
+    display: none;
+    background: url("../images/news/news-65.png")no-repeat 0 0 ;
+}
+.banner:hover .banner-span1{
+    display: block;
+}
+/*banner图中 右箭头*/
+.banner .banner-span2{
+    width:44px;
+    height:101px;
+    position: absolute;
+    top:150px;
+    right:0;
+    display: none;
+    cursor: pointer;
+    background: url("../images/news/news-65.png")no-repeat -255px 0 ;
+}
+.banner:hover .banner-span2{
+    display: block;
+}
+/*banner图中的文字*/
+.banner p{
+    display: block;
+    width:840px;
+    height:200px;
+    position: absolute;
+    bottom:0;
+    background: url("../images/news/news-8.png");
+}
+.banner p a{
+    display: block;
+    width: 500px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    bottom: 0;
+    color: white;
+    overflow: hidden;
+    position: absolute;
+}
+.banner p a:hover{
+    color: #FF7C7C;
+}
+/*右侧列表*/
+.banner-list {
+    width: 330px;
+    height: 430px;
+    margin-left: 30px;
+    background-color: #e9e9e9;
+}
+.banner-list ul {
+    width: 330px;
+    height: 240px;
+    background-color: #f9f9f9;
+}
+.banner-list ul li {
+    width: 310px;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 40px;
+}
+.banner-list ul li a:hover {
+    color: orangered;
+}
+.banner-list ul li:nth-child(1) {
+    background-color: #dddddd;
+}
+/*娱乐头条+台哥报报---------------------------------------------------------------------------------------------------*/
+.recreation {
+    width: 1200px;
+    height: 1540px;
+}
+/*左侧*/
+.recreation-left {
+    width: 840px;
+    height: 1540px;
+}
+.hot {
+    width: 840px;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #bbb;
+}
+/*文字：娱悦头条*/
+.hot p {
+    height: 40px;
+    font-size: 0;
+    margin: 20px 0;
+    padding-bottom: 10px;
+}
+/*文字：更多*/
+.hot a {
+    display: block;
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    right: 6px;
+    color: #a4a4a4;
+}
+.hot a:hover{
+    color: orangered;
+}
+/*娱悦头条内容*/
+.toutiao-news {
+    width: 840px;
+    height: 440px;
+}
+.toutiao-news-left {
+    width: 320px;
+    height: 412px;
+    position: relative;
+}
+.toutiao-news .toutiao-news-left .bg {
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    color: white;
+    padding: 0 10px;
+    background-image: url("../images/news/news-6.png");
+}
+.toutiao-news .toutiao-news-left .bg h3{
+    font-weight: 400;
+}
+/*头条列表*/
+.toutiao-news-right {
+    width: 520px;
+    height: 412px;
+}
+.toutiao-news-right ul {
+    width: 520px;
+}
+.toutiao-news-right ul li {
+    width: 520px;
+    border-bottom: 1px solid #e9e9e9;
+    line-height: 31px;
+    margin-bottom: 14px;
+    padding-left: 14px;
+}
+.toutiao-news-right ul li a {
+    font-size: 20px;
+}
+.toutiao-news-right ul li a:hover {
+    color: orangered;
+}
+.toutiao-news-right ul li p {
+    color: #8b8b8b;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+/*防弹少年团图*/
+.cadet img {
+    width: 840px;
+    height: 100px;
+    margin-top: 30px;
+}
+/*新闻标题1*/
+.news-topic {
+    border-bottom: 1px solid #bbbbbb;
+    margin-top: 20px;
+}
+.news-topic li {
+    border-right: 1px solid #cccccc;
+    text-align: left;
+    width: 59px;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.news-topic li:nth-child(2) {
+    text-align: right;
+    border-right: none;
+}
+.news-topic li a {
+    padding-bottom: 6px;
+}
+.news-topic li a:hover {
+    color: #ff6666;
+    border-bottom: 2px solid #ff6666;
+}
+/*新闻内容*/
+.news-content li{
+    border-bottom: 1px solid #e9e9e9;
+    width: 405px;
+    margin-left: 30px;
+    padding: 16px 0;
+    height: 80px;
+}
+.news-content li:nth-child(2n-1){
+    margin-left: 0;
+}
+.news-content li a{
+    font: 20px 'Microsoft yahei';
+    color: #111;
+    width: 405px;
+    display: inline-block;
+    margin-bottom: 8px;
+    overflow: hidden;
+    height: 26px;
+}
+.news-content li a:hover{
+    color: orangered;
+}
+.news-content li p{
+    font: 14px/22px 'Microsoft yahei';
+    color: #8b8b8b;
+    width: 390px;
+    height: 42px;
+    overflow: hidden;
+    display: inline-block;
+}
+/*右侧------------------------------------------------------------------------------------------------------------*/
+.recreation-right {
+    width: 330px;
+    height: 1540px;
+    margin-left: 30px;
+}
+/*文字：台哥报报----------------------------------------------------------*/
+.taige {
+    width: 330px;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #bbb;
+}
+.taige p {
+    height: 40px;
+    font-size: 0;
+    margin: 20px 0;
+    padding-bottom: 10px;
+}
+/*文字：更多*/
+.taige a {
+    display: block;
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    right: 6px;
+    color: #a4a4a4;
+}
+.taige a:hover{
+    color: orangered;
+}
+/*台哥报报下的小视频*/
+.recreation-right ul li {
+    width:330px;
+    margin-bottom: 20px;
+}
+.recreation-right ul li a img{
+    transition: 1s;
+}
+.taige-list-imgbox{
+    width:330px;
+    height:190px;
+    overflow: hidden;
+    position: relative;
+}
+.recreation-right ul li a img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+.recreation-right ul li a em{
+    background:url("../images/news/news-64.png") no-repeat;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    display: inline-block;
+}
+.recreation-right ul li p {
+    font-size: 14px;
+    background: #ddd;
+    padding: 10px;
+    width: 310px;
+    color: #000;
+    margin-top: -4px;
+}
+.recreation-right ul li p:hover {
+    color: orangered;
+}
+/*台哥专栏-------------------------------------------------------------------*/
+.column {
+    width: 330px;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #bbb;
+}
+/*文字：台哥专栏*/
+.column p {
+    height: 40px;
+    font-size: 0;
+    margin: 20px 0;
+    padding-bottom: 10px;
+}
+/*文字：更多*/
+.column a {
+    display: block;
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    right: 6px;
+    color: #a4a4a4;
+}
+.column a:hover{
+    color: orangered;
+}
+/*台哥专栏下的小视频*/
+.column-list li {
+    margin-bottom: 20px;
+    position: relative;
+}
+.recreation-right ul li span {
+    font-size: 14px;
+    color: white;
+    bottom: 30px;
+    left: 10px;
+    display: block;
+    width: 330px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 14px;
+}
+.taige-list-span{
+    width:330px;
+    height:100px;
+    background: url("../images/news/news-62.png");
+    position: absolute;
+    bottom:0;
+}
+/*文字：你好八卦*/
+.gossip {
+    width: 330px;
+    height: 50px;
+    position: relative;
+    border-bottom: 1px solid #bbb;
+}
+.gossip p {
+    height: 40px;
+    font-size: 0;
+    padding-bottom: 10px;
+}
+.gossip-list{
+    margin-top: 7px;
+}
+.recreation-right .gossip-list li{
+    font-size: 14px;
+    color: #000;
+    width: 310px;
+    margin-bottom: 10px;
+}
+.recreation-right .gossip-list li h3{
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+    font-weight: 400;
+}
+.recreation-right .gossip-list li a:hover{
+    color: orangered;
+}
+/*明星圈框-----------------------------------------------------------------------------------------------------------*/
+.star-titlebox{
+    width:1200px;
+    height:626px;
+}
+.star-title{
+    background: url("../images/news/news-16.png") no-repeat;
+    width: 1200px;
+    height: 88px;
+    position: relative;
+    margin-top: 10px;
+}
+/*文字：明星圈*/
+.star-title p{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -72px;
+    background: url("../images/news/news-17.png") no-repeat;
+    width: 144px;
+    height: 44px;
+    font-size: 0;
+}
+.star-content{
+    width:1200px;
+    height:538px;
+}
+/*今日星主角----------------------------*/
+.todaystar{
+    width:318px;
+    height:530px;
+    position:relative;
+}
+.today-title{
+    font: 20px 'Microsoft yahei';
+    color: #000;
+    margin: 30px 0 20px 0;
+}
+.todaystar.today-box a{
+    width: 318px;
+    height: 450px;
+    overflow: hidden;
+}
+/*图片中的文字大小设置*/
+.today-bg{
+    position: absolute;
+    width:318px;
+    height:50px;
+    bottom: 0;
+    font-size: 14px;
+    color: white;
+    padding: 0 10px;
+    background: url("../images/news/news-19.png");
+}
+.today-box .bg h3{
+    width: 290px;
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+    height: 25px;
+    margin: 60px 0 3px;
+}
+.today-box .bg p{
+    width: 290px;
+    font-size: 14px;
+    color: #ccc;
+}
+/*最新--------------------------------------*/
+.newstar{
+    width:490px;
+    height:530px;
+    margin: 0 30px 0 28px;
+}
+.newstar-title{
+    width:490px;
+    height:50px;
+    position: relative;
+}
+.newstar-title h3{
+    font: 20px 'Microsoft yahei';
+    color: #000;
+    margin: 30px 0 20px 0;
+}
+/*文字：更多*/
+.newstar-title a{
+    top: 8px;
+    position: absolute;
+    right: 0;
+    color: #999;
+}
+.newstar-title a:hover{
+    color: orangered;
+}
+/*最新中的内容*/
+.newstar-content{
+    width:492px;
+    height:460px;
+    margin-top:-10px;
+}
+/*li的大小设置*/
+.newstar-content li{
+    padding: 8px 0;
+    height: 104px;
+    width:492px;
+    border-bottom: 1px solid #ececec;
+}
+.newstar-content li:nth-child(4){
+    border-bottom: none;
+}
+/*li中的图片大小设置*/
+.newstar-content li a{
+    display: block;
+    width: 160px;
+    height: 90px;
+    overflow: hidden;
+}
+/*li中的文字内容 div的大小设置*/
+.newstar-content-A{
+    width: 317px;
+    margin-left: 12px;
+}
+.newstar-content-1 .newstar-content-A a{
+    display: block;
+    width: 300px;
+    height:28px;
+    font-size: 18px;
+    color: #000;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.newstar-content-1 .newstar-content-A a:hover{
+    color: orangered;
+}
+.newstar-content-1 .newstar-content-A p{
+    font: 14px/20px 'Microsoft yahei';
+    color: #999999;
+    height: 40px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.newstar-content-1 .newstar-content-A p span{
+    padding: 6px;
+}
+.newstar-content-1 .newstar-content-A p .click:hover{
+    color: orangered;
+}
+/*星访谈-----------------------*/
+.interview{
+    width:330px;
+    height:524px;
+}
+.interview h3{
+    font: 20px 'Microsoft yahei';
+    color: #000;
+    margin: 30px 0 20px 0;
+}
+.interview-content{
+    background: #f8f8f8;
+    padding-left: 10px;
+    width: 320px;
+    height:454px;
+}
+/*图片的大小*/
+.interview-content  img{
+    width:320px;
+}
+/*li的大小设置*/
+.interview-content li{
+    width:320px;
+    height:38px;
+}
+.interview-content li a:hover{
+    color: orangered;
+}
+.interview-content li a{
+    height: 33px;
+    line-height: 33px;
+    font-size: 14px;
+    color: #000;
+    width: 310px;
+    display: inline-block;
+}
+/*每行文字前的小方块*/
+.interview-content li .squre{
+    display: inline-block;
+    margin-right: 6px;
+    width: 4px;
+    height: 4px;
+    background: #000;
+    vertical-align: middle;
+}
+/*台哥高清框----------------------------------------*/
+.high-definition{
+    width:1200px;
+    height:536px;
+    margin-top: 30px;
+}
+/*台哥两个字*/
+.high-definition h3{
+    font: 20px 'Microsoft yahei';
+    color: #000;
+    margin-bottom: 16px;
+}
+/*第一块*/
+.high-definition-1{
+    width:280px;
+    height:492px;
+    margin-right: 16px;
+}
+.high-definition-1 a{
+    display: block;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+}
+.high-definition-1 .high-definition-1-top{
+    width:280px;
+    height:50px;
+    font-size: 14px;
+    left: 0;
+    color: #fff;
+    line-height: 50px;
+    padding-left: 10px;
+    position: absolute;
+    bottom: -50px;
+    transition: .5s;
+    background: url("../images/news/news-33.png");
+}
+.high-definition-1 a:hover .high-definition-1-top{
+    bottom:0;
+}
+/*第二块*/
+.high-definition-2{
+    width:256px;
+    height:492px;
+    margin-right: 16px;
+}
+.high-definition-2 a{
+    display: block;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+}
+.high-definition-2 .high-definition-1-top{
+    width:280px;
+    height:50px;
+    font-size: 14px;
+    left: 0;
+    color: #fff;
+    line-height: 50px;
+    padding-left: 10px;
+    position: absolute;
+    bottom: -50px;
+    transition: .5s;
+    background: url("../images/news/news-33.png");
+}
+.high-definition-2 a:hover .high-definition-1-top{
+    bottom:0;
+}
+/*第三块*/
+.high-definition-3{
+    width:362px;
+    height:492px;
+    margin-right: 16px;
+}
+.high-definition-3 a{
+    display: block;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+}
+.high-definition-3 .high-definition-1-top{
+    width:280px;
+    height:50px;
+    font-size: 14px;
+    left: 0;
+    color: #fff;
+    line-height: 50px;
+    padding-left: 10px;
+    position: absolute;
+    bottom: -50px;
+    transition: .5s;
+    background: url("../images/news/news-33.png");
+}
+.high-definition-3 a:hover .high-definition-1-top {
+    bottom: 0;
+}
+/*第四块*/
+.high-definition-4{
+    width:254px;
+    height:492px;
+}
+.high-definition-4 a{
+    display: block;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+}
+.high-definition-4 .high-definition-1-top{
+    width:280px;
+    height:50px;
+    font-size: 14px;
+    left: 0;
+    color: #fff;
+    line-height: 50px;
+    padding-left: 10px;
+    position: absolute;
+    bottom: -50px;
+    transition: .5s;
+    background: url("../images/news/news-33.png");
+}
+.high-definition-4 a:hover .high-definition-1-top{
+    bottom:0;
+}
+/*影视圈----------------------------------------------------------------------------------------------------------*/
+.movie{
+    width:1200px;
+    height:900px;
+    margin-top: 30px;
+}
+.movie-title{
+    background: url("../images/news/news-34.png") no-repeat;
+    width: 1200px;
+    height: 88px;
+    position: relative;
+    margin-top: 10px;
+}
+/*文字：影视圈*/
+.movie-title p{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -72px;
+    background: url("../images/news/news-35.png") no-repeat;
+    width: 144px;
+    height: 44px;
+    font-size: 0;
+}
+/*影视圈 内容*/
+.movie-content{
+    width:1200px;
+    height:800px;
+}
+/*第一块 看点----------------*/
+.film{
+    width:318px;
+    height:800px;
+}
+.watching{
+    width:318px;
+    height:280px;
+}
+.watching h3{
+    font: 20px 'Microsoft yahei';
+    color: #000;
+    margin: 30px 0 20px 0;
+}
+.watching-imgbox{
+    width:318px;
+    height:180px;
+    overflow: hidden;
+    position: relative;
+}
+.watching img{
+    transition: 1s;
+}
+.watching img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+.watching p {
+    font-size: 16px;
+    background: #ddd;
+    padding: 10px;
+    height:28px;
+    width: 298px;
+    color: #000;
+    margin-top: -4px;
+    overflow: hidden;
+}
+.watching p:hover {
+    color: orangered;
+}
+/*扒剧*/
+.drama{
+    width:318px;
+    height:434px;
+}
+.drama h3{
+    font: 20px 'Microsoft yahei';
+    color: #000;
+    margin-top:30px;
+}
+.drama-imgbox{
+    width:318px;
+    height:184px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+.drama img{
+    transition: 1s;
+}
+.drama img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+.drama img{
+    min-height: 100%;
+    min-width: 100%;
+}
+/*扒剧中的文字背景*/
+.drama-bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url("../images/news/news-63.png") no-repeat;
+    padding: 0 10px;
+    width: 298px;
+    height: 105px;
+}
+/*扒剧中的文字*/
+.drama-bg span{
+    display: block;
+    color: #fff;
+    font: 16px/40px 'Microsoft Yahei';
+    margin-top: 62px;
+}
+/*第二块  最新----------------------------------*/
+.newlist{
+    width:490px;
+    height:790px;
+    margin: 0 4px 0 28px;
+}
+.newlist-title{
+    width:490px;
+    height:50px;
+    position: relative;
+}
+.newlist-title h3{
+    font: 20px 'Microsoft yahei';
+    color: #000;
+    margin: 30px 0 20px 0;
+}
+/*文字：更多*/
+.newlist-title a{
+    top: 8px;
+    position: absolute;
+    right: 0;
+    color: #999;
+}
+.newlist-title a:hover{
+    color: orangered;
+}
+/*最新中的内容*/
+.newlist-content{
+    width:492px;
+    height:460px;
+    margin-top:-10px;
+}
+/*li的大小设置*/
+.newlist-content li{
+    padding: 8px 0;
+    height: 104px;
+    width:492px;
+    border-bottom: 1px solid #ececec;
+}
+.newlist-content li:nth-child(6){
+    border-bottom: none;
+}
+/*li中的图片大小设置*/
+.newlist-content li a{
+    display: block;
+    width: 160px;
+    height: 90px;
+    overflow: hidden;
+}
+/*li中的文字内容 div的大小设置*/
+.newlist-content-A{
+    width: 317px;
+    margin-left: 12px;
+}
+.newlist-content-1 .newlist-content-A a{
+    display: block;
+    width: 300px;
+    height:28px;
+    font-size: 18px;
+    color: #000;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.newlist-content-1 .newlist-content-A a:hover{
+    color: orangered;
+}
+.newlist-content-1 .newlist-content-A p{
+    font: 14px/20px 'Microsoft yahei';
+    color: #999999;
+    height: 40px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.newlist-content-1 .newlist-content-A p span{
+    padding: 6px;
+}
+.newlist-content-1 .newlist-content-A p .click:hover{
+    color: orangered;
+}
+/*第三块 正在热映-----------------------------*/
+.showing {
+    width:332px;
+    height:800px;
+    margin-left: 28px;
+}
+.showing h3{
+    font: 20px 'Microsoft yahei';
+    color: #000;
+    margin: 26px 0 20px 0;
+}
+.now-box{
+    width:308px;
+    height:290px;
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+}
+.now-box p:nth-child(3){
+    color: #999;
+}
+.now-content-top{
+    width:308px;
+    height:180px;
+    margin-bottom: 20px;
+}
+.now-content-top-1{
+    width:178px;
+    height:180px;
+    margin-left: 10px;
+}
+.now-content-top-1 h3{
+    font-size: 18px;
+    margin-bottom: 10px
+}
+.now-content-top-1 span{
+    color: #8b8b8b;
+}
+/*文字下的小箭头*/
+.now-box .arrows-1{
+    display: block;
+    width:10px;
+    height:18px;
+    background: url("../images/news/news-71.png") 0 0;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+.now-box .arrows-1:hover{
+    color: orangered;
+}
+.now-box .arrows-2{
+    display: block;
+    width:10px;
+    height:18px;
+    background: url("../images/news/news-71.png") -10px 0;
+    margin-left: 190px;
+    margin-top: -18px;
+}
+.now-box .arrows-2:hover{
+    color: orangered;
+}
+/*合作伙伴-------------------------------------------------------------------------------------------------*/
+.join{
+    width:1200px;
+    height:346px;
+    padding-bottom: 10px;
+}
+.partner{
+    border-bottom: 1px solid #bbb;
+}
+.linkbox{
+    width:1200px;
+    height:254px;
+    padding-top:30px;
+}
+.linkbox ul li{
+    float: left;
+    width: 145px;
+    text-align: center;
+    margin: 0 0 30px 26px;
+}
+.linkbox ul li a img{
+    width:143px;
+    height:58px;
+}
+/*合作伙伴中的文字*/
+.linkbox ul li span{
+    font: 16px/30px 'Microsoft yahei';
+    color: #111;
+    display: block;
+}
+.linkbox ul li span:hover{
+    color: orangered;
+}
+/*底部---------------------------------------------------------------------------------------------------*/
+.footer{
+    width:100%;
+    height:150px;
+    background-color: black;
+}
+.top_main .top_left .top_nav>:nth-child(1) a { 
+    color: #ccc; 
+}
+.top_main .top_left .top_nav>:nth-child(4) a { 
+    color: #cf9; 
+}

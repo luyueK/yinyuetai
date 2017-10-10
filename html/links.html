@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>友情链接 -- 音悦Tai-让娱乐更美好</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/top_nav.css">
+	<link rel="stylesheet" href="../css/links.css">
+    <script src="../js/jquery-1.7.2.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+    	$(function (){
+    		(function(){
+				var timer = null;
+				function autoPlay(){
+
+					var i = 0;
+					clearInterval(timer);
+					timer = setInterval(function (){
+						i++;
+						if ( i == 6 ) i = 0;
+						$('.cycle_image .btn li').removeClass('active');
+						$('.cycle_image .silde img').addClass('hide').stop().animate({
+							opacity: 0,
+							zIndex:0
+						},1000);
+
+						$('.cycle_image .btn li').eq(i).addClass('active');
+						$('.cycle_image .silde img').removeClass('hide').eq(i).stop().animate({
+							opacity: 1,
+							zIndex: 1
+						},1000);
+
+					},3000);
+				}
+
+				autoPlay();
+
+				$('.cycle_image .btn li').click(function (){
+					clearInterval(timer);
+					$('.cycle_image .btn li').removeClass('active');
+					$(this).addClass('active');
+					$('.cycle_image .silde img').addClass('hide').stop().animate({
+						opacity: 0,
+						zIndex:0
+					},1000);
+					$(".cycle_image .silde img").removeClass('hide').eq($(this).index()).stop().animate({
+						opacity: 1,
+						zIndex: 1
+					},1000);
+				});
+				$('.cycle_image .btn').mouseout(function (){
+					autoPlay();
+				});
+			})(); 
+    	});
+    </script>
+</head>
+<body>
+	<div class="back_top"><a href="javascript:;"><img src="../images/returntop.png" alt=""></a></div>
+	<nav class="top_main clearfix">
+        <div class="top_left fl">
+            <div class="logo fl">
+                <a href="../index.html"><h1>音悦Tai - 让娱乐更美好</h1></a>
+            </div>
+            <ul class="top_nav fl">
+                <li class=" fl"><a href="../index.html">首页</a></li>
+                <li class="mv_box fl">
+                    <a class="clearfix" href="mv.html"><span class="fl">MV</span><i class="fl"></i></a>
+                    <ul class="mv_list">
+                        <li><a href="#">韩流频道</a></li>
+                        <li><a href="#">华语频道</a></li>
+                        <li><a href="#">欧美频道</a></li>
+                        <li><a href="#">日语频道</a></li>
+                        <li><a href="#">粉丝聚焦</a></li>
+                    </ul>
+                </li>
+                <li class="fl"><a href="vchart.html">V榜</a></li>
+                <li class="fl"><a href="news.html">娱乐</a></li>
+                <li class="fl"><a href="shop.html">商城</a></li>
+                <li class="fl"><a href="funding.html">众筹</a></li>
+                <li class="fl"><a href="folkCulture.html">民俗文化</a></li>
+            </ul>
+        </div>
+        <div class="top_right fr">
+            <ul class="func clearfix">
+                <li class="search_bar fl">
+                    <div></div>
+                    <div></div>
+                    <form action="http://so.yinyuetai.com">
+                        <div class="search_box"><input type="text" placeholder="金刚狼十七年催泪混剪"><i></i></div>
+                    </form>
+                    <div class="search_bar_down">
+                        <ul>
+                            <li><a href="#">夏日女团清凉回归</a> </li>
+                            <li><a href="#">exo歌曲demo大合集</a> </li>
+                            <li><a href="#">林肯公园主唱自杀身亡</a> </li>
+                            <li><a href="#">天了噜！薛之谦田馥甄</a> </li>
+                            <li><a href="#">暑期档电视剧OST友情大放送</a> </li>
+                            <li><a href="#">2017下半年要回归的KPOP团！</a> </li>
+                            <li><a href="#">楚乔宇文玥昨天接吻</a> </li>
+                            <li><a href="#">金泰妍最佳舞台演唱合集！超棒</a> </li>
+                            <li><a href="#">吴青峰未发表作品《只有可以》</a> </li>
+                            <li><a href="#">男生跳女版舞步究！？</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="top_vip fl"><a href="#"></a></li>
+                <li class="top_up fl"><a href="#"></a></li>
+                <li class="top_share fl">
+                    <a class="clearfix" href="#"><span class="fl"></span><i class="fl"></i></a>
+                    <ul class="share_list">
+                        <li><a href="#">移动客户端</a></li>
+                        <li><a href="#">PC客户端</a></li>
+                        <li><a href="#">Star明星直播</a></li>
+                    </ul>
+                </li>
+                <li class="login_bar fl">
+                    <a class="login" href="#">登录</a>
+                    <a class="reg" href="#">注册</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+	<div class="cycle_image">
+		<div class="silde">
+			<img src="../images/links/lb_cyl.jpg" alt="蔡依林">
+			<img class="hide" src="../images/links/lb_cy.jpg" alt="蔡妍">
+			<img class="hide" src="../images/links/lb_mww.jpg" alt="莫文蔚">
+			<img class="hide" src="../images/links/lb_jyr.jpg" alt="江映蓉">
+			<img class="hide" src="../images/links/lb_hj.jpg" alt="何洁">
+			<img class="hide" src="../images/links/lb_tw.jpg" alt="Tamas Wells">
+		</div>
+		<ul class="btn clearfix">
+			<li class="active fl"><a href="#"></a></li>
+			<li class="fl"><a href="#"></a></li>
+			<li class="fl"><a href="#"></a></li>
+			<li class="fl"><a href="#"></a></li>
+			<li class="fl"><a href="#"></a></li>
+			<li class="fl"><a href="#"></a></li>
+		</ul>
+	</div>
+	<div class="links_main">
+		<div class="main_bg clearfix">
+			<div class="main_bg_l fl">
+				<section class="company">
+					<h2>版权合作</h2>
+					<ul class="clearfix">
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+					</ul>
+				</section>
+				<section class="company link">
+					<h2>版权合作</h2>
+					<ul class="clearfix">
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/link_1.jpg" alt="环球音乐"></a>
+						</li>
+					</ul>
+					<ul class="clearfix link_words">
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="九酷音乐网">九酷音乐网</a>
+						</li>
+					</ul>
+				</section>
+				<section class="company">
+					<h2>版权合作</h2>
+					<ul class="clearfix">
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+					</ul>
+				</section>
+				<section class="company">
+					<h2>版权合作</h2>
+					<ul class="clearfix">
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+						<li class="fl">
+							<a class="com_pic" href="#" target="_blank" title="环球音乐"><img src="../images/links/company_1.jpg" alt="环球音乐"></a>
+							<p class="com_name">
+								<a href="#" target="_blank" title="环球音乐">环球音乐</a>
+							</p>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="main_bg_r fl">
+				<div class="logo_des">
+					<div class="logo_word">
+						<strong>音悦Tai标志</strong>
+
+						<p class="biaozhi">如果您是音悦Tai合作伙伴或媒体伙伴，下方所示音悦TaiLogo，供贵方在联合推广或新闻报道中使用。</p>
+					</div>
+					<div class="logo_pic">
+						<div class="marks">
+							<img src="../images/links/yyt_logos.png" alt="上音悦台 看好音乐" title="上音悦台 看好音乐">
+							<span>88X31px</span>
+						</div>
+						<div class="left" style="width: 100%">链接代码</div>
+						<div class="code" title="上音悦台 看好音乐">
+							&lt;a href="#" target="_blank"&gt;&lt;img
+							src="../images/links/yyt_logos.png" border="0"&gt;&lt;/a&gt;
+						</div>
+						<div class="marks markl">
+							<img src="../images/links/yyt_logob.png" alt="上音悦台 看好音乐" title="上音悦台 看好音乐">
+							<span>120X60px</span>
+						</div>
+						<div class="left" style="width: 100%">链接代码</div>
+						<div class="code" title="上音悦台 看好音乐">
+							&lt;a href="#" target="_blank"&gt;&lt;img
+							src="../images/links/yyt_logob.png" border="0"&gt;&lt;/a&gt;
+						</div>
+					</div>
+				</div>
+				<div class="apply_des">
+					<div class="logo_word l_word">
+						<strong>友情链接申请说明</strong>
+						<p>欢迎您和音悦Tai交换友情链接。<br>只要您的网站是内容健康向上，日访问量较高的站点，就可以和音悦Tai交换友情链接。</p>
+						<dl>
+							<dt>具体操作流程如下：</dt>
+							<dd>
+								<p>1.将您的资料包括网站名称、网站地址、网站logo、联系人姓名和Email、网站的简介等发Email至 <a class="mail" href="#">zhendong.wu#yinyuetai.com</a><br>（请将邮件地址中的#改为@）
+								</p>
+								<p>2.音悦Tai的工作人员会在3个工作日内完成对贵站的审核，并会通知贵站是否成为音悦Tai的友情链接伙伴。</p>
+								<p>3.如果有其它市场合作请联系<br>QQ：370437115</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer_main">
+	    <p class="footer_links">
+	        <a href="article3.html">关于我们</a>
+	        <span></span>
+	        <a href="joinus.html">人才招聘</a>
+	        <span></span>
+	        <a href="article1.html">联系我们</a>
+	        <span></span>
+	        <a href="links.html">友情链接</a>
+	        <span></span>
+	        <a href="article4.html">版权声明</a>
+	        <span></span>
+	        <a href="service.html">客服中心</a>
+	    </p>
+
+	    <p class="footer_copy">
+	        <a href="#"><img src="../images/culture.png" alt=""
+	                         style="vertical-align: top;width:25px;height:25px;margin-right:3px;"></a>
+	        Copyright © 2009 - 2017 yinyuetai.com 广播电视节目制作经营 许可证编号(京)字第1891号 |
+	        <a href="#">京网文[2014]2037-287号</a>
+	        <a href="#">网络视听许可证0110413号</a>
+	        <br>
+	        <a href="#"><img src="../images/ghs.png" alt="" style="vertical-align: top;"> 京公网安备11010502014900号 </a>
+	        | 京ICP备11024134号-1 | 京ICP证060716号 | 出版物经营许可证
+	        <a href="#">新出发京批字第直160022号</a>
+	        | 增值电信业务经营许可证B2-20140501
+	        <a href="#"><img src="../images/biaoshi.gif" alt="" style="vertical-align: top; margin-top: -25px;"></a>
+
+	    </p>
+	</div>	
+	
+</body>
+</html>
